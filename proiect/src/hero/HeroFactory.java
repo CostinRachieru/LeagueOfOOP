@@ -12,12 +12,12 @@ public final class HeroFactory {
         return instance;
     }
 
-    public Hero createHero(final String type) {
+    public Hero createHero(final String type, int posX, int posY) {
         switch (type) {
-            case "Pyromancer": return new Pyromancer();
-            case "Knight": return new Knight();
-            case "Wizard": return new Wizard();
-            case "Rogue": return new Rogue();
+            case "P": return new Pyromancer(posX, posY);
+            case "K": return new Knight(posX, posY);
+            case "W": return new Wizard(posX, posY);
+            case "R": return new Rogue(posX, posY);
             default : return null;
         }
     }

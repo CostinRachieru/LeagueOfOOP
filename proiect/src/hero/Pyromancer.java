@@ -1,6 +1,10 @@
 package hero;
 
 public final class Pyromancer extends Hero {
+    public Pyromancer(int posX, int posY) {
+        location = new Coordinates(posX, posY);
+    }
+
     @Override
     public void isAttackedBy(Hero hero) {
         hero.attack(this);

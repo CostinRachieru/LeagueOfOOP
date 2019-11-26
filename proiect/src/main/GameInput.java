@@ -1,5 +1,7 @@
 package main;
 
+import hero.Coordinates;
+
 import java.util.ArrayList;
 
 public class GameInput {
@@ -8,7 +10,7 @@ public class GameInput {
     private final ArrayList<String> map;
     private int nrHeroes;
     private final ArrayList<String> playersType;
-    private final ArrayList<ArrayList<Integer>> playersPosition;
+    private final ArrayList<Coordinates> playersPosition;
     private final int nrRounds;
     private final ArrayList<String> moves;
 
@@ -26,7 +28,7 @@ public class GameInput {
     public GameInput(final int mapHeight, final int mapWidth,
                      final ArrayList<String> map, final int nrHeroes,
                      final ArrayList<String> playersType,
-                     final ArrayList<ArrayList<Integer>> playersPosition,
+                     final ArrayList<Coordinates> playersPosition,
                      final int nrRounds, final ArrayList<String> moves) {
         this.mapHeight = mapHeight;
         this.mapWidth = mapWidth;
@@ -58,7 +60,7 @@ public class GameInput {
         return playersType;
     }
 
-    public ArrayList<ArrayList<Integer>> getPlayersPosition() {
+    public ArrayList<Coordinates> getPlayersPosition() {
         return playersPosition;
     }
 

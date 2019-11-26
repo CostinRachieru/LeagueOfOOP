@@ -1,7 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ea0e8ae3-d339-4667-a474-2c36e2cded76" name="Default Changelist" comment="" />
+    <list default="true" id="ea0e8ae3-d339-4667-a474-2c36e2cded76" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/game/GameEngine.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hero/Coordinates.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Output/production/proiect/gamemap/DesertCell.class" beforeDir="false" afterPath="$PROJECT_DIR$/Output/production/proiect/gamemap/DesertCell.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Output/production/proiect/gamemap/LandCell.class" beforeDir="false" afterPath="$PROJECT_DIR$/Output/production/proiect/gamemap/LandCell.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Output/production/proiect/gamemap/VolcanicCell.class" beforeDir="false" afterPath="$PROJECT_DIR$/Output/production/proiect/gamemap/VolcanicCell.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Output/production/proiect/gamemap/WoodsCell.class" beforeDir="false" afterPath="$PROJECT_DIR$/Output/production/proiect/gamemap/WoodsCell.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Output/production/proiect/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/Output/production/proiect/main/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gamemap/Cell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gamemap/Cell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gamemap/GameMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gamemap/GameMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hero/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hero/Hero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hero/HeroFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hero/HeroFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hero/Knight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hero/Knight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hero/Pyromancer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hero/Pyromancer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hero/Rogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hero/Rogue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hero/Wizard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hero/Wizard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/GameInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/GameInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/GameInputLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/GameInputLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,7 +35,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectId" id="1U4QOnLxBDLaHaiaYtixC7npKvZ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -61,5 +85,16 @@
       <updated>1574613357863</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

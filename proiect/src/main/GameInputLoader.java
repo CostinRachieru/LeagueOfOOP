@@ -3,6 +3,7 @@ package main;
 import java.util.ArrayList;
 
 import fileio.FileSystem;
+import hero.Coordinates;
 
 public class GameInputLoader {
     private final String mInputPath;
@@ -19,8 +20,7 @@ public class GameInputLoader {
         ArrayList<String> map = new ArrayList<>();
         int nrHeroes = 0;
         ArrayList<String> playersType = new ArrayList<>();
-        ArrayList<ArrayList<Integer>> playersPosition = new
-                ArrayList<ArrayList<Integer>>();
+        ArrayList<Coordinates> playersPosition = new ArrayList<>();
         int nrRounds = 0;
         ArrayList<String> moves = new ArrayList<>();
 
@@ -38,10 +38,7 @@ public class GameInputLoader {
 
             for (int i = 0; i < nrHeroes; ++i) {
                 playersType.add(fs.nextWord());
-                ArrayList<Integer> position = new ArrayList<>();
-                position.add(fs.nextInt());
-                position.add(fs.nextInt());
-                playersPosition.add(position);
+                playersPosition.add(new Coordinates(fs.nextInt(), fs.nextInt()));
             }
 
             nrRounds = fs.nextInt();

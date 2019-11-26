@@ -1,6 +1,11 @@
 package hero;
 
 public final class Rogue extends Hero{
+    public Rogue(int posX, int posY) {
+        location = new Coordinates(posX, posY);
+        System.out.print("R");
+    }
+
     @Override
     public void isAttackedBy(Hero hero) {
         hero.attack(this);
