@@ -6,11 +6,13 @@ import java.util.ArrayList;
 
 public abstract class Cell {
     protected ArrayList<Hero> heroesInCell;
-    protected Cell() {}
+    protected boolean combatDone;
 
     public void addHero(Hero hero) {
         heroesInCell.add(hero);
     }
+
+    public abstract boolean isCombat();
 
     public abstract void printCellType();
 

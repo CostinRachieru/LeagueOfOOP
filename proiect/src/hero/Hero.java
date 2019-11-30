@@ -1,19 +1,26 @@
 package hero;
 
+import common.Constants;
 import gamemap.Cell;
 import gamemap.GameMap;
 
 public abstract class Hero {
     protected int id;
     protected Coordinates location;
-    protected int xp;
+    protected int experience;
     protected int level;
+    protected int healthPoints;
+    protected char type;
+    protected float landModifier;
+    protected int damageOverTime;
+    protected int roundsLeftDmg;
 
     public abstract void isAttackedBy(Hero hero);
     public abstract void attack(Rogue rogue);
     public abstract void attack(Pyromancer pyromancer);
     public abstract void attack(Wizard wizard);
     public abstract void attack(Knight knight);
+    public abstract void resetHealthPoints();
 
     public Coordinates getLocation() {
         return location;
@@ -26,6 +33,7 @@ public abstract class Hero {
 
     public void printLocation() {
         System.out.println(location.getLine() + " : " + location.getRow());
+        System.out.println("ID: " + id);
         GameMap gameMap = GameMap.getInstance();
         Cell cell = gameMap.getCell(location);
         cell.printCellType();
@@ -63,7 +71,7 @@ public abstract class Hero {
     }
 
     public void moveTo(char nextLocation) {
-        this.leaveCell();
+        leaveCell();
         switch (nextLocation) {
             case 'U': moveUp(); break;
             case 'D': moveDown(); break;
@@ -81,4 +89,87 @@ public abstract class Hero {
         return false;
     }
 
+    public char getType() {
+        return type;
+    }
+
+    public void setLandModifier(float landModifier) {
+        this.landModifier = landModifier;
+    }
+
+    public float getLandModifier() {
+        return landModifier;
+    }
+
+    public void setDamageOverTime(int damage) {
+        damageOverTime = damage;
+    }
+
+    public void setRoundsLeftDmg(int rounds) {
+        roundsLeftDmg = rounds;
+    }
+
+    public void sufferDamageOverTime() {
+        if (roundsLeftDmg > 0) {
+            roundsLeftDmg--;
+            sufferDamage(damageOverTime);
+        }
+    }
+
+    private void setDeath() {
+        healthPoints = 0;
+        damageOverTime = 0;
+        roundsLeftDmg = 0;
+        leaveCell();
+        location.setRow(-1);
+        location.setLine(-1);
+    }
+
+    public void sufferDamage(int damage) {
+        healthPoints -= damage;
+        if (healthPoints <= 0) {
+            setDeath();
+        }
+    }
+
+    public void updateLevel() {
+        int newlevel = (experience - Constants.BASE_EXPERIENCE) / Constants.EXPERIENCE_BETWEEN_LEVELS;
+        if (newlevel > level) {
+            resetHealthPoints();
+            level = newlevel;
+        }
+        System.out.println(id + ": LEVEL " + level);
+    }
+
+    public void kill(Hero hero) {
+        int opponentLevel = hero.getLevel();
+        int experienceGained = 200 - (level - opponentLevel) * 40;
+        if (experienceGained < 0) {
+            experienceGained = 0;
+        }
+//        experience += experienceGained;
+        experience += 340;
+        if (experience > 250) {
+            updateLevel();
+        }
+    }
+
+    public boolean isAlive() {
+        if (healthPoints > 0) {
+            return true;
+        }
+        return false;
+    }
+
+    public int getHealthPoints() {
+        return  healthPoints;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public int getLevel() {
+        return level;
+    }
 }

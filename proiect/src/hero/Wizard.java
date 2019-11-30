@@ -1,11 +1,21 @@
 package hero;
 
+import common.Constants;
+
 public final class Wizard extends Hero {
     public Wizard(int line, int row, int givenId) {
         location = new Coordinates(line, row);
-        xp = 0;
+        experience = 0;
         level = 0;
         id = givenId;
+        healthPoints = Constants.WIZARD_BASE_HEALTHPOINTS;
+        type = 'W';
+        damageOverTime = 0;
+        roundsLeftDmg = 0;
+    }
+
+    public void resetHealthPoints() {
+        healthPoints = Constants.WIZARD_BASE_HEALTHPOINTS;
     }
 
     @Override

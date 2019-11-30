@@ -30,4 +30,51 @@ public final class GameEngine {
         }
         return heroes;
     }
+
+    public static void moveHeroes(int round, ArrayList<String> moves, ArrayList<Hero> heroes) {
+        String movesThisRound = moves.get(round);
+        int whichHero = 0;
+        /**
+         * Moves every player to the desired location.
+         */
+        for (Hero hero : heroes) {
+            hero.sufferDamageOverTime();
+            char nextLocation = movesThisRound.charAt(whichHero);
+            if (hero.isAlive()) {
+                hero.moveTo(nextLocation);
+            }
+            whichHero++;
+        }
+    }
+
+    public static void doCombats(ArrayList<Hero> heroes) {
+        GameMap map = GameMap.getInstance();
+        for (Hero hero : heroes) {
+            System.out.println("Check: Id:" + hero.getId() + " - " + hero.getHealthPoints());
+            if (hero.isAlive()) {
+                hero.printLocation();
+            }
+            System.out.println();
+            if (hero.isAlive()) {
+                Coordinates location = hero.getLocation();
+                if (map.isCombat(location)) {
+                    ArrayList<Hero> heroesToFight = map.getHeroesInCell(location);
+                    Hero firstHero = heroesToFight.get(0); // P
+                    Hero secondHero = heroesToFight.get(1); // K
+                    System.out.println(firstHero.getId() + ": " + firstHero.getHealthPoints());
+                    System.out.println(secondHero.getId() + ": " + secondHero.getHealthPoints());
+                    secondHero.isAttackedBy(firstHero);
+                    firstHero.isAttackedBy(secondHero);
+                    System.out.println(firstHero.getId() + ": HEALTH " + firstHero.getHealthPoints());
+                    System.out.println(secondHero.getId() + ": HEALTH " + secondHero.getHealthPoints());
+                    if (firstHero.isAlive() && !secondHero.isAlive()) {
+                        firstHero.kill(secondHero);
+                    }
+                    if (secondHero.isAlive() && !firstHero.isAlive()) {
+                        secondHero.kill(firstHero);
+                    }
+                }
+            }
+        }
+    }
 }

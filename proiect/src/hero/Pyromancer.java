@@ -1,11 +1,44 @@
 package hero;
 
+import common.Constants;
+
+import static common.Constants.FIREBLAST_BASE_DAMAGE;
+
 public final class Pyromancer extends Hero {
     public Pyromancer(int line, int row, int givenId) {
         location = new Coordinates(line, row);
-        xp = 0;
+        experience = 0;
         level = 0;
         id = givenId;
+        healthPoints = Constants.PYROMANCER_BASE_HEALTHPOINTS;
+        type = 'P';
+        damageOverTime = 0;
+        roundsLeftDmg = 0;
+    }
+
+    public void resetHealthPoints() {
+        healthPoints = Constants.PYROMANCER_BASE_HEALTHPOINTS;
+    }
+
+    private float igniteBase(char opponentType) {
+        float modifier = landModifier;
+        float damage = Constants.IGNITE_BASE_DAMAGE + (level * Constants.IGNITE_DAMAGE_PER_LEVEL);
+        damage *= modifier;
+        return damage;
+    }
+
+    private float igniteOverTime(char opponent) {
+        float modifier = landModifier;
+        float damage = Constants.IGNITE_BASE_DAMAGE_PER_ROUND + (level * Constants.IGNITE_DAMAGE_PER_ROUND_PER_LEVEL);
+        damage *= modifier;
+        return damage;
+    }
+
+    private float fireBlast(char opponentType) {
+        float modifier = landModifier;
+        float damage = Constants.FIREBLAST_BASE_DAMAGE + (level * Constants.FIREBLAST_DAMAGE_PER_LEVEL);
+        damage *= modifier;
+        return damage;
     }
 
     @Override
@@ -15,22 +48,55 @@ public final class Pyromancer extends Hero {
 
     @Override
     public void attack(Rogue rogue) {
-        System.out.println("P-R: Good day, rogue!");
+//        float firstAbilityDmg = fireBlast('R');
+//        System.out.println("FireBlast: " + firstAbilityDmg);
     }
 
     @Override
     public void attack(Pyromancer pyromancer) {
-        System.out.println("P-P: Yo, bro! Nice to see you!");
+        System.out.println("Pyromancer vs. Pyromancer");
+        int firstAbilityDmg = Math.round(fireBlast('K') *
+                Constants.RACE_MODIFIER_FIREBLAST_PYROMANCER_VS_KNIGHT);
+        System.out.println("FireBlast: " + firstAbilityDmg);
+        int secondAbilityDmg = Math.round(igniteBase('K') *
+                Constants.RACE_MODIFIER_IGNITE_PYROMANCER_VS_KNIGHT);
+        System.out.println(("Ignite: " + secondAbilityDmg));
+        int secondAbilityDmgOverTime = Math.round(igniteOverTime('K') *
+                Constants.RACE_MODIFIER_IGNITE_PYROMANCER_VS_KNIGHT);
+        System.out.println("IgniteOverTime: " + secondAbilityDmgOverTime);
+        pyromancer.setDamageOverTime(secondAbilityDmgOverTime);
+        pyromancer.setRoundsLeftDmg(Constants.IGNITE_ROUNDS_TO_TAKE_DAMAGE);
+
+        int damageDealt = firstAbilityDmg + secondAbilityDmg;
+        pyromancer.sufferDamage(damageDealt);
     }
 
     @Override
     public void attack(Wizard wizard) {
-        System.out.println("P-W: Good evening!");
+//        int firstAbilityDmg = fireBlast('W');
+//        System.out.println("FireBlast: " + firstAbilityDmg);
     }
 
     @Override
     public void attack(Knight knight) {
-        System.out.println("P-K: Te am atacat fa");
+        System.out.println("Pyromancer vs. Knight");
+        int firstAbilityDmg = Math.round(fireBlast('K') *
+                Constants.RACE_MODIFIER_FIREBLAST_PYROMANCER_VS_KNIGHT);
+        System.out.println("FireBlast: " + firstAbilityDmg);
+        int secondAbilityDmg = Math.round(igniteBase('K') *
+                Constants.RACE_MODIFIER_IGNITE_PYROMANCER_VS_KNIGHT);
+        System.out.println(("Ignite: " + secondAbilityDmg));
+        int secondAbilityDmgOverTime = Math.round(igniteOverTime('K') *
+                Constants.RACE_MODIFIER_IGNITE_PYROMANCER_VS_KNIGHT);
+        System.out.println("IgniteOverTime: " + secondAbilityDmgOverTime);
+        knight.setDamageOverTime(secondAbilityDmgOverTime);
+        knight.setRoundsLeftDmg(Constants.IGNITE_ROUNDS_TO_TAKE_DAMAGE);
+
+        int damageDealt = firstAbilityDmg + secondAbilityDmg;
+        knight.sufferDamage(damageDealt);
+        if (!knight.isAlive()) {
+            kill(knight);
+        }
     }
 }
 

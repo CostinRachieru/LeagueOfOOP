@@ -1,5 +1,6 @@
 package gamemap;
 
+import common.Constants;
 import hero.Coordinates;
 import hero.Hero;
 import hero.HeroFactory;
@@ -54,5 +55,20 @@ public class GameMap {
     public void heroGoToCell(Hero hero, Coordinates location) {
         Cell cell = getCell(location);
         cell.addHero(hero);
+    }
+
+    public boolean isCombat(Coordinates location) {
+        if (getCell(location).isCombat()) {
+            return true;
+        }
+        return false;
+    }
+
+    public void doLandModifier(Coordinates location) {
+
+    }
+
+    public ArrayList<Hero> getHeroesInCell(Coordinates location) {
+        return getCell(location).getHeroesInCell();
     }
 }
