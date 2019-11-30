@@ -1,9 +1,11 @@
 package hero;
 
 public final class Wizard extends Hero {
-    public Wizard(int posX, int posY) {
-        location = new Coordinates(posX, posY);
-        System.out.print("W");
+    public Wizard(int line, int row, int givenId) {
+        location = new Coordinates(line, row);
+        xp = 0;
+        level = 0;
+        id = givenId;
     }
 
     @Override

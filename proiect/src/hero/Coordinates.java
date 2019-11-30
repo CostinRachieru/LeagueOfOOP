@@ -1,31 +1,31 @@
 package hero;
 
 public class Coordinates {
-    private int posX;
-    private int posY;
+    private int line;
+    private int row;
 
     public Coordinates() {
-        posX = -1;
-        posY = -1;
+        line = -1;
+        row = -1;
     }
-    public Coordinates(int posX, int posY) {
-        this.posX = posX;
-        this.posY = posY;
-    }
-
-    public int getPosX() {
-        return posX;
+    public Coordinates(int line, int row) {
+        this.line = line;
+        this.row = row;
     }
 
-    public int getPosY() {
-        return posY;
+    public int getLine() {
+        return line;
     }
 
-    public void setPosX(int posX) {
-        this.posX = posX;
+    public int getRow() {
+        return row;
     }
 
-    public void setPosY(int posY) {
-        this.posY = posY;
+    public void setLine(int line) {
+        this.line = line;
+    }
+
+    public void setRow(int row) {
+        this.row = row;
     }
 }

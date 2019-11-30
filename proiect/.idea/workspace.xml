@@ -2,27 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ea0e8ae3-d339-4667-a474-2c36e2cded76" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/game/GameEngine.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hero/Coordinates.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/gamemap/DesertCell.class" beforeDir="false" afterPath="$PROJECT_DIR$/Output/production/proiect/gamemap/DesertCell.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/gamemap/LandCell.class" beforeDir="false" afterPath="$PROJECT_DIR$/Output/production/proiect/gamemap/LandCell.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/gamemap/VolcanicCell.class" beforeDir="false" afterPath="$PROJECT_DIR$/Output/production/proiect/gamemap/VolcanicCell.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/gamemap/WoodsCell.class" beforeDir="false" afterPath="$PROJECT_DIR$/Output/production/proiect/gamemap/WoodsCell.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/Output/production/proiect/main/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/input.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/GameEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/GameEngine.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gamemap/Cell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gamemap/Cell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gamemap/DesertCell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gamemap/DesertCell.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gamemap/GameMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gamemap/GameMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gamemap/LandCell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gamemap/LandCell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gamemap/VolcanicCell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gamemap/VolcanicCell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gamemap/WoodsCell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gamemap/WoodsCell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hero/Coordinates.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hero/Coordinates.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hero/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hero/Hero.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hero/HeroFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hero/HeroFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hero/Knight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hero/Knight.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hero/Pyromancer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hero/Pyromancer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hero/Rogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hero/Rogue.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hero/Wizard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hero/Wizard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/GameInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/GameInput.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/GameInputLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/GameInputLoader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,23 +37,18 @@
   </component>
   <component name="ProjectId" id="1U4QOnLxBDLaHaiaYtixC7npKvZ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="flattenPackages" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.0" />
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -72,6 +64,18 @@
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -91,10 +95,34 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="768" y="256" width="374" height="592" key="#com.intellij.ide.util.MemberChooser" timestamp="1575124106236">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="768" y="256" width="374" height="592" key="#com.intellij.ide.util.MemberChooser/0.27.1920.1053@0.27.1920.1053" timestamp="1575124106236" />
+    <state width="1874" height="258" key="GridCell.Tab.0.bottom" timestamp="1575124879237">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1874" height="258" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1575124879237" />
+    <state width="1874" height="258" key="GridCell.Tab.0.center" timestamp="1575124879237">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1874" height="258" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1575124879237" />
+    <state width="1874" height="258" key="GridCell.Tab.0.left" timestamp="1575124879237">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1874" height="258" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1575124879237" />
+    <state width="1874" height="258" key="GridCell.Tab.0.right" timestamp="1575124879237">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1874" height="258" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1575124879237" />
   </component>
 </project>

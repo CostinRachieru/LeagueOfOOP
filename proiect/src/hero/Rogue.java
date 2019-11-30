@@ -1,9 +1,11 @@
 package hero;
 
 public final class Rogue extends Hero{
-    public Rogue(int posX, int posY) {
-        location = new Coordinates(posX, posY);
-        System.out.print("R");
+    public Rogue(int line, int row, int givenId) {
+        location = new Coordinates(line, row);
+        xp = 0;
+        level = 0;
+        id = givenId;
     }
 
     @Override

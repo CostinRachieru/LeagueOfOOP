@@ -2,15 +2,27 @@ package gamemap;
 
 import hero.Coordinates;
 import hero.Hero;
+import hero.HeroFactory;
 
 import java.util.ArrayList;
 
 public class GameMap {
+    private static GameMap instance = null;
     private int height;
     private int width;
     private ArrayList<ArrayList<Cell>> terrain;
 
-    public GameMap(int mapHeight, int mapWidth, ArrayList<String> map) {
+    private GameMap() {
+    }
+
+    public static GameMap getInstance() {
+        if (instance == null) {
+            instance = new GameMap();
+        }
+        return instance;
+    }
+
+    public void initGameMap(int mapHeight, int mapWidth, ArrayList<String> map) {
         height = mapHeight;
         width = mapWidth;
         CellFactory cellFactory = CellFactory.getInstance();
@@ -26,7 +38,21 @@ public class GameMap {
         for (int i = 0; i < heroes.size(); ++i) {
             Hero hero = heroes.get(i);
             Coordinates location = hero.getLocation();
-            terrain.get(location.getPosX()).get(location.getPosY()).addHero(hero);
+            getCell(location).addHero(hero);
         }
+    }
+
+    public Cell getCell(Coordinates position) {
+        return terrain.get(position.getLine()).get(position.getRow());
+    }
+
+    public void heroLeaveCell(Hero hero, Coordinates location) {
+        Cell cell = getCell(location);
+        cell.heroLeave(hero);
+    }
+
+    public void heroGoToCell(Hero hero, Coordinates location) {
+        Cell cell = getCell(location);
+        cell.addHero(hero);
     }
 }

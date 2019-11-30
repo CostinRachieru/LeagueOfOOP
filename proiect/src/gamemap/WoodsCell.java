@@ -7,6 +7,9 @@ import java.util.ArrayList;
 public class WoodsCell extends Cell {
     public WoodsCell() {
         heroesInCell = new ArrayList<Hero>();
-        System.out.println("W");
+    }
+
+    public void printCellType() {
+        System.out.print("Woods ");
     }
 }

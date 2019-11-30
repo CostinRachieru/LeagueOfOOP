@@ -1,8 +1,11 @@
 package hero;
 
 public final class Pyromancer extends Hero {
-    public Pyromancer(int posX, int posY) {
-        location = new Coordinates(posX, posY);
+    public Pyromancer(int line, int row, int givenId) {
+        location = new Coordinates(line, row);
+        xp = 0;
+        level = 0;
+        id = givenId;
     }
 
     @Override

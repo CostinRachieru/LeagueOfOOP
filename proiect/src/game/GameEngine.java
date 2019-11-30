@@ -12,8 +12,9 @@ public final class GameEngine {
     private GameEngine() {
     }
 
-    public static GameMap initMap(GameInput gameInput) {
-        return new GameMap(gameInput.getMapHeight(), gameInput.getMapWidth(), gameInput.getMap());
+    public static void initMap(GameInput gameInput) {
+        GameMap map = GameMap.getInstance();
+        map.initGameMap(gameInput.getMapHeight(), gameInput.getMapWidth(), gameInput.getMap());
     }
 
     public static ArrayList<Hero> initHeroes(GameInput gameInput) {
@@ -23,9 +24,9 @@ public final class GameEngine {
         ArrayList<String> playersType = gameInput.getPlayersType();
         ArrayList<Coordinates> playersPosition = gameInput.getPlayersPosition();
         for (int i = 0; i < nrHeroes; ++i) {
-            int posX = playersPosition.get(i).getPosX();
-            int posY = playersPosition.get(i).getPosY();
-            heroes.add(heroFactory.createHero(playersType.get(i), posX, posY));
+            int row = playersPosition.get(i).getRow();
+            int line = playersPosition.get(i).getLine();
+            heroes.add(heroFactory.createHero(playersType.get(i), line, row, i));
         }
         return heroes;
     }
