@@ -1,0 +1,4 @@
+Starting audit...
+[ERROR] /home/costintudi/Desktop/Proiect-POO(etapa1)/proiect/src/hero/Hero.java:4:8: Unused import - gamemap.Cell. [UnusedImports]
+Audit done.
+Checkstyle ends with 1 errors.

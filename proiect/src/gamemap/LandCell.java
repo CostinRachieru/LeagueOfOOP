@@ -5,14 +5,14 @@ import hero.Hero;
 
 import java.util.ArrayList;
 
-public class LandCell extends Cell {
+public final class LandCell extends Cell {
     public LandCell() {
         heroesInCell = new ArrayList<Hero>();
         combatDone = false;
     }
 
     public boolean isCombat() {
-        if (heroesInCell.size() == 2 && combatDone == false) {
+        if (heroesInCell.size() == 2 && !combatDone) {
             Hero firstHero = heroesInCell.get(0);
             Hero secondHero = heroesInCell.get(1);
             if (firstHero.getType() == 'K') {
@@ -28,14 +28,10 @@ public class LandCell extends Cell {
             combatDone = true;
             return true;
         } else {
-            if (combatDone == true) {
+            if (combatDone) {
                 combatDone = false;
             }
         }
         return false;
-    }
-
-    public void printCellType() {
-        System.out.print("Land ");
     }
 }

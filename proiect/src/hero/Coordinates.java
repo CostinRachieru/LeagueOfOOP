@@ -1,6 +1,6 @@
 package hero;
 
-public class Coordinates {
+public final class Coordinates {
     private int line;
     private int row;
 
@@ -8,7 +8,7 @@ public class Coordinates {
         line = -1;
         row = -1;
     }
-    public Coordinates(int line, int row) {
+    public Coordinates(final int line, final int row) {
         this.line = line;
         this.row = row;
     }
@@ -21,11 +21,11 @@ public class Coordinates {
         return row;
     }
 
-    public void setLine(int line) {
+    public void setLine(final int line) {
         this.line = line;
     }
 
-    public void setRow(int row) {
+    public void setRow(final int row) {
         this.row = row;
     }
 }

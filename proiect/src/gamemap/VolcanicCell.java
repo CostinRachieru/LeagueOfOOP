@@ -5,14 +5,14 @@ import hero.Hero;
 
 import java.util.ArrayList;
 
-public class VolcanicCell extends Cell {
+public final class VolcanicCell extends Cell {
     public VolcanicCell() {
         heroesInCell = new ArrayList<Hero>();
         combatDone = false;
     }
 
     public boolean isCombat() {
-        if (heroesInCell.size() == 2 && combatDone == false) {
+        if (heroesInCell.size() == 2 && !combatDone) {
             Hero firstHero = heroesInCell.get(0);
             Hero secondHero = heroesInCell.get(1);
             if (firstHero.getType() == 'P') {
@@ -28,14 +28,10 @@ public class VolcanicCell extends Cell {
             combatDone = true;
             return true;
         } else {
-            if (combatDone == true) {
+            if (combatDone) {
                 combatDone = false;
             }
         }
         return false;
-    }
-
-    public void printCellType() {
-        System.out.print("Volcanic ");
     }
 }

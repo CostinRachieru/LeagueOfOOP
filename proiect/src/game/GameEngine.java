@@ -12,12 +12,12 @@ public final class GameEngine {
     private GameEngine() {
     }
 
-    public static void initMap(GameInput gameInput) {
+    public static void initMap(final GameInput gameInput) {
         GameMap map = GameMap.getInstance();
         map.initGameMap(gameInput.getMapHeight(), gameInput.getMapWidth(), gameInput.getMap());
     }
 
-    public static ArrayList<Hero> initHeroes(GameInput gameInput) {
+    public static ArrayList<Hero> initHeroes(final GameInput gameInput) {
         HeroFactory heroFactory = HeroFactory.getInstance();
         int nrHeroes = gameInput.getNrHeroes();
         ArrayList<Hero> heroes = new ArrayList<>();
@@ -31,7 +31,8 @@ public final class GameEngine {
         return heroes;
     }
 
-    public static void moveHeroes(int round, ArrayList<String> moves, ArrayList<Hero> heroes) {
+    public static void moveHeroes(final int round, final ArrayList<String> moves,
+                                  final ArrayList<Hero> heroes) {
         String movesThisRound = moves.get(round);
         int whichHero = 0;
         /**
@@ -49,32 +50,25 @@ public final class GameEngine {
         }
     }
 
-    public static void doCombats(ArrayList<Hero> heroes) {
+    public static void doCombats(final ArrayList<Hero> heroes) {
         GameMap map = GameMap.getInstance();
         for (Hero hero : heroes) {
-            System.out.println("Check: ID:" + hero.getId() + " - " + hero.getHealthPoints());
-            if (hero.isAlive()) {
-                hero.printLocation();
-            }
-            System.out.println();
             if (hero.isAlive()) {
                 Coordinates location = hero.getLocation();
                 if (map.isCombat(location)) {
                     ArrayList<Hero> heroesToFight = map.getHeroesInCell(location);
                     Hero firstHero = heroesToFight.get(0); // P
                     Hero secondHero = heroesToFight.get(1); // K
-                    System.out.println(firstHero.getId() + ": " + firstHero.getHealthPoints());
-                    System.out.println(secondHero.getId() + ": " + secondHero.getHealthPoints());
                     secondHero.isAttackedBy(firstHero);
                     firstHero.isAttackedBy(secondHero);
-                    System.out.println(firstHero.getId() + ": HEALTH " + firstHero.getHealthPoints());
-                    System.out.println(secondHero.getId() + ": HEALTH " + secondHero.getHealthPoints());
                     if (firstHero.isAlive() && !secondHero.isAlive()) {
                         firstHero.kill(secondHero);
                     }
                     if (secondHero.isAlive() && !firstHero.isAlive()) {
                         secondHero.kill(firstHero);
                     }
+                    firstHero.increasaCriticalCount();
+                    secondHero.increasaCriticalCount();
                 }
             }
         }

@@ -1,16 +1,14 @@
 package gamemap;
 
-import common.Constants;
 import hero.Coordinates;
 import hero.Hero;
-import hero.HeroFactory;
 
 import java.util.ArrayList;
 
-public class GameMap {
+public final class GameMap {
     private static GameMap instance = null;
-    private int height;
-    private int width;
+    private static int height;
+    private static int width;
     private ArrayList<ArrayList<Cell>> terrain;
 
     private GameMap() {
@@ -23,7 +21,7 @@ public class GameMap {
         return instance;
     }
 
-    public void initGameMap(int mapHeight, int mapWidth, ArrayList<String> map) {
+    public void initGameMap(final int mapHeight, final int mapWidth, final ArrayList<String> map) {
         height = mapHeight;
         width = mapWidth;
         CellFactory cellFactory = CellFactory.getInstance();
@@ -35,7 +33,7 @@ public class GameMap {
             }
         }
     }
-    public void spawnHeroes(ArrayList<Hero> heroes) {
+    public void spawnHeroes(final ArrayList<Hero> heroes) {
         for (int i = 0; i < heroes.size(); ++i) {
             Hero hero = heroes.get(i);
             Coordinates location = hero.getLocation();
@@ -43,32 +41,28 @@ public class GameMap {
         }
     }
 
-    public Cell getCell(Coordinates position) {
-        return terrain.get(position.getLine()).get(position.getRow());
-    }
-
-    public void heroLeaveCell(Hero hero, Coordinates location) {
+    public void heroLeaveCell(final Hero hero, final Coordinates location) {
         Cell cell = getCell(location);
         cell.heroLeave(hero);
     }
 
-    public void heroGoToCell(Hero hero, Coordinates location) {
+    public void heroGoToCell(final Hero hero, final Coordinates location) {
         Cell cell = getCell(location);
         cell.addHero(hero);
     }
 
-    public boolean isCombat(Coordinates location) {
+    public boolean isCombat(final Coordinates location) {
         if (getCell(location).isCombat()) {
             return true;
         }
         return false;
     }
 
-    public void doLandModifier(Coordinates location) {
-
+    public ArrayList<Hero> getHeroesInCell(final Coordinates location) {
+        return getCell(location).getHeroesInCell();
     }
 
-    public ArrayList<Hero> getHeroesInCell(Coordinates location) {
-        return getCell(location).getHeroesInCell();
+    public Cell getCell(final Coordinates position) {
+        return terrain.get(position.getLine()).get(position.getRow());
     }
 }

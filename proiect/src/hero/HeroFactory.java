@@ -12,7 +12,7 @@ public final class HeroFactory {
         return instance;
     }
 
-    public Hero createHero(final String type, int line, int row, int id) {
+    public Hero createHero(final String type, final int line, final int row, final int id) {
         switch (type) {
             case "P": return new Pyromancer(line, row, id);
             case "K": return new Knight(line, row, id);

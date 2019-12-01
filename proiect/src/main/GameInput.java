@@ -11,7 +11,6 @@ public class GameInput {
     private int nrHeroes;
     private final ArrayList<String> playersType;
     private final ArrayList<Coordinates> playersPosition;
-    private final int nrRounds;
     private final ArrayList<String> moves;
 
     public GameInput() {
@@ -21,7 +20,6 @@ public class GameInput {
         nrHeroes = -1;
         playersType = null;
         playersPosition = null;
-        nrRounds = -1;
         moves = null;
     }
 
@@ -29,46 +27,41 @@ public class GameInput {
                      final ArrayList<String> map, final int nrHeroes,
                      final ArrayList<String> playersType,
                      final ArrayList<Coordinates> playersPosition,
-                     final int nrRounds, final ArrayList<String> moves) {
+                     final ArrayList<String> moves) {
         this.mapHeight = mapHeight;
         this.mapWidth = mapWidth;
         this.map = map;
         this.nrHeroes = nrHeroes;
         this.playersType = playersType;
         this.playersPosition = playersPosition;
-        this.nrRounds = nrRounds;
         this.moves = moves;
     }
 
-    public int getMapHeight() {
+    public final int getMapHeight() {
         return mapHeight;
     }
 
-    public int getMapWidth() {
+    public final int getMapWidth() {
         return mapWidth;
     }
 
-    public ArrayList<String> getMap() {
+    public final ArrayList<String> getMap() {
         return map;
     }
 
-    public int getNrHeroes() {
+    public final int getNrHeroes() {
         return nrHeroes;
     }
 
-    public ArrayList<String> getPlayersType() {
+    public final ArrayList<String> getPlayersType() {
         return playersType;
     }
 
-    public ArrayList<Coordinates> getPlayersPosition() {
+    public final ArrayList<Coordinates> getPlayersPosition() {
         return playersPosition;
     }
 
-    public int getNrRounds() {
-        return nrRounds;
-    }
-
-    public ArrayList<String> getMoves() {
+    public final ArrayList<String> getMoves() {
         return moves;
     }
 }

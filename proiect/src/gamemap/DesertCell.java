@@ -11,8 +11,8 @@ public class DesertCell extends Cell {
         combatDone = false;
     }
 
-    public boolean isCombat() {
-        if (heroesInCell.size() == 2 && combatDone == false) {
+    public final boolean isCombat() {
+        if (heroesInCell.size() == 2 && !combatDone) {
             Hero firstHero = heroesInCell.get(0);
             Hero secondHero = heroesInCell.get(1);
             if (firstHero.getType() == 'W') {
@@ -28,14 +28,10 @@ public class DesertCell extends Cell {
             combatDone = true;
             return true;
         } else {
-            if (combatDone == true) {
+            if (combatDone) {
                 combatDone = false;
             }
         }
         return false;
-    }
-
-    public void printCellType() {
-        System.out.print("Desert ");
     }
 }

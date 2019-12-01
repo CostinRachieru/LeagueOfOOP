@@ -1,6 +1,6 @@
 package gamemap;
 
-public class CellFactory {
+public final class CellFactory {
     private static CellFactory instance = null;
 
     private CellFactory() { }
