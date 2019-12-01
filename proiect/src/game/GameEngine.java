@@ -41,7 +41,9 @@ public final class GameEngine {
             hero.sufferDamageOverTime();
             char nextLocation = movesThisRound.charAt(whichHero);
             if (hero.isAlive()) {
-                hero.moveTo(nextLocation);
+                if (!hero.isStunned()) {
+                    hero.moveTo(nextLocation);
+                }
             }
             whichHero++;
         }
@@ -50,7 +52,7 @@ public final class GameEngine {
     public static void doCombats(ArrayList<Hero> heroes) {
         GameMap map = GameMap.getInstance();
         for (Hero hero : heroes) {
-            System.out.println("Check: Id:" + hero.getId() + " - " + hero.getHealthPoints());
+            System.out.println("Check: ID:" + hero.getId() + " - " + hero.getHealthPoints());
             if (hero.isAlive()) {
                 hero.printLocation();
             }

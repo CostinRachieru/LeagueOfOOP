@@ -15,7 +15,7 @@ public final class Wizard extends Hero {
     }
 
     public void resetHealthPoints() {
-        healthPoints = Constants.WIZARD_BASE_HEALTHPOINTS;
+        healthPoints = Constants.WIZARD_BASE_HEALTHPOINTS + level * Constants.WIZARD_HEALTHPOINTS_PER_LEVEL;
     }
 
     @Override

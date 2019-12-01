@@ -14,6 +14,7 @@ public abstract class Hero {
     protected float landModifier;
     protected int damageOverTime;
     protected int roundsLeftDmg;
+    protected int roundsStunned;
 
     public abstract void isAttackedBy(Hero hero);
     public abstract void attack(Rogue rogue);
@@ -135,8 +136,8 @@ public abstract class Hero {
     public void updateLevel() {
         int newlevel = (experience - Constants.BASE_EXPERIENCE) / Constants.EXPERIENCE_BETWEEN_LEVELS;
         if (newlevel > level) {
-            resetHealthPoints();
             level = newlevel;
+            resetHealthPoints();
         }
         System.out.println(id + ": LEVEL " + level);
     }
@@ -147,11 +148,18 @@ public abstract class Hero {
         if (experienceGained < 0) {
             experienceGained = 0;
         }
-//        experience += experienceGained;
-        experience += 340;
+        experience += experienceGained;
         if (experience > 250) {
             updateLevel();
         }
+    }
+
+    public boolean isStunned() {
+        if (roundsStunned > 0) {
+            roundsStunned--;
+            return true;
+        }
+        return false;
     }
 
     public boolean isAlive() {
@@ -171,5 +179,9 @@ public abstract class Hero {
 
     public int getLevel() {
         return level;
+    }
+
+    public void setRoundsStunned(int rounds) {
+        roundsStunned = rounds;
     }
 }

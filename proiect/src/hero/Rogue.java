@@ -15,7 +15,7 @@ public final class Rogue extends Hero{
     }
 
     public void resetHealthPoints() {
-        healthPoints = Constants.ROGUE_BASE_HEALTHPOINTS;
+        healthPoints = Constants.ROGUE_BASE_HEALTHPOINTS + level * Constants.ROGUE_HEALTHPOINTS_PER_LEVEL;
     }
 
     @Override

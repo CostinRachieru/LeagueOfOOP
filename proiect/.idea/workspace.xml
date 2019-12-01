@@ -4,20 +4,13 @@
     <list default="true" id="ea0e8ae3-d339-4667-a474-2c36e2cded76" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/input.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/Constants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/game/GameEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/GameEngine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gamemap/Cell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gamemap/Cell.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gamemap/DesertCell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gamemap/DesertCell.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gamemap/GameMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gamemap/GameMap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gamemap/LandCell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gamemap/LandCell.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gamemap/VolcanicCell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gamemap/VolcanicCell.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gamemap/WoodsCell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gamemap/WoodsCell.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hero/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hero/Hero.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hero/Knight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hero/Knight.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hero/Pyromancer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hero/Pyromancer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hero/Rogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hero/Rogue.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hero/Wizard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hero/Wizard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,22 +100,22 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="768" y="256" width="374" height="592" key="#com.intellij.ide.util.MemberChooser/0.27.1920.1053@0.27.1920.1053" timestamp="1575124106236" />
-    <state width="1874" height="258" key="GridCell.Tab.0.bottom" timestamp="1575156305832">
+    <state width="1874" height="258" key="GridCell.Tab.0.bottom" timestamp="1575162850698">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="258" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1575156305832" />
-    <state width="1874" height="258" key="GridCell.Tab.0.center" timestamp="1575156305832">
+    <state width="1874" height="258" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1575162850698" />
+    <state width="1874" height="258" key="GridCell.Tab.0.center" timestamp="1575162850697">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="258" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1575156305832" />
-    <state width="1874" height="258" key="GridCell.Tab.0.left" timestamp="1575156305832">
+    <state width="1874" height="258" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1575162850697" />
+    <state width="1874" height="258" key="GridCell.Tab.0.left" timestamp="1575162850697">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="258" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1575156305832" />
-    <state width="1874" height="258" key="GridCell.Tab.0.right" timestamp="1575156305832">
+    <state width="1874" height="258" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1575162850697" />
+    <state width="1874" height="258" key="GridCell.Tab.0.right" timestamp="1575162850698">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="258" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1575156305832" />
+    <state width="1874" height="258" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1575162850698" />
     <state width="1874" height="344" key="GridCell.Tab.1.bottom" timestamp="1575143195312">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -139,9 +132,9 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state width="1874" height="344" key="GridCell.Tab.1.right/0.27.1920.1053@0.27.1920.1053" timestamp="1575143195312" />
-    <state x="624" y="253" key="run.anything.popup" timestamp="1575147894496">
+    <state x="624" y="253" key="run.anything.popup" timestamp="1575157251820">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="624" y="253" key="run.anything.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1575147894496" />
+    <state x="624" y="253" key="run.anything.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1575157251820" />
   </component>
 </project>

@@ -1,7 +1,7 @@
 package common;
 
 public class Constants {
-    public static final int PYROMANCER_BASE_HEALTHPOINTS = 500;
+    public static final int PYROMANCER_BASE_HEALTHPOINTS = 180;
     public static final int PYROMANCER_HEALTHPOINTS_PER_LEVEL = 50;
 
     public static final int FIREBLAST_BASE_DAMAGE = 350;
@@ -27,6 +27,25 @@ public class Constants {
 
     public static final int KNIGHT_BASE_HEALTHPOINTS = 900;
     public static final int KNIGHT_HEALTHPOINTS_PER_LEVEL = 80;
+
+    public static final int EXECUTE_BASE_DAMAGE = 200;
+    public static final int EXECUTE_DAMAGE_PER_LEVEL = 30;
+    public static final float EXECUTE_BASE_HP_LIMIT = 0.2f;
+
+    public static final int SLAM_BASE_DAMAGE = 100;
+    public static final int SLAM_DAMAGE_PER_LEVEL = 40;
+
+    public static final float RACE_MODIFIER_EXECUTE_KNIGHT_VS_ROGUE = 1.15f;
+    public static final float RACE_MODIFIER_EXECUTE_KNIGHT_VS_KNIGHT = 1f;
+    public static final float RACE_MODIFIER_EXECUTE_KNIGHT_VS_PYROMANCER = 1.10f;
+    public static final float RACE_MODIFIER_EXECUTE_KNIGHT_VS_WIZARD = 0.8f;
+
+    public static final float RACE_MODIFIER_SLAM_KNIGHT_VS_ROGUE = 0.8f;
+    public static final float RACE_MODIFIER_SLAM_KNIGHT_VS_KNIGHT = 1.2f;
+    public static final float RACE_MODIFIER_SLAM_KNIGHT_VS_PYROMANCER = 0.9f;
+    public static final float RACE_MODIFIER_SLAM_KNIGHT_VS_WIZARD = 1.05f;
+
+
 
     public static final int ROGUE_BASE_HEALTHPOINTS = 600;
     public static final int ROGUE_HEALTHPOINTS_PER_LEVEL = 40;
