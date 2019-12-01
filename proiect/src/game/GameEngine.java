@@ -36,7 +36,7 @@ public final class GameEngine {
         String movesThisRound = moves.get(round);
         int whichHero = 0;
         /**
-         * Moves every player to the desired location.
+         * Moves every player to the desired location if not stunned.
          */
         for (Hero hero : heroes) {
             hero.sufferDamageOverTime();
@@ -67,8 +67,11 @@ public final class GameEngine {
                     if (secondHero.isAlive() && !firstHero.isAlive()) {
                         secondHero.kill(firstHero);
                     }
-                    firstHero.increasaCriticalCount();
-                    secondHero.increasaCriticalCount();
+                    /**
+                     * criticalCount is the same with the current round playing.
+                     */
+                    firstHero.increaseCriticalCount();
+                    secondHero.increaseCriticalCount();
                 }
             }
         }

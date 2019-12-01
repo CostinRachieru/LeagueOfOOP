@@ -18,9 +18,8 @@ public final class Main {
         ArrayList<Hero> heroes = GameEngine.initHeroes(gameInput);
         GameMap  map = GameMap.getInstance();
         map.spawnHeroes(heroes);
-//        GameEngine.doCombats(heroes);
         /**
-         * Plays each round of the game after the heroes were spawned
+         * Plays each round of the game.
          */
         ArrayList<String> moves = gameInput.getMoves();
         int nrRounds = moves.size();

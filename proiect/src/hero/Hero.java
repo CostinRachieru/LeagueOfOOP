@@ -1,7 +1,6 @@
 package hero;
 
 import common.Constants;
-import gamemap.Cell;
 import gamemap.GameMap;
 
 public abstract class Hero {
@@ -134,7 +133,7 @@ public abstract class Hero {
         return false;
     }
 
-    public final void increasaCriticalCount() {
+    public final void increaseCriticalCount() {
         criticalCount++;
     }
 

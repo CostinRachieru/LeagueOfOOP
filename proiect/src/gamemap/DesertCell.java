@@ -11,6 +11,10 @@ public class DesertCell extends Cell {
         combatDone = false;
     }
 
+    /**
+     * Method that checks if there will be a combat and also updates the land modifiers
+     * for the heroes.
+     */
     public final boolean isCombat() {
         if (heroesInCell.size() == 2 && !combatDone) {
             Hero firstHero = heroesInCell.get(0);
