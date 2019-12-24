@@ -15,6 +15,7 @@ public final class Rogue extends Hero {
         damageOverTime = 0;
         roundsLeftDmg = 0;
         criticalCount = 0;
+        angelModifier = 0f;
     }
 
     public void acceptHelp(final Angel angel) {
@@ -60,9 +61,9 @@ public final class Rogue extends Hero {
             damage *= Constants.BACKSTAB_CRITICAL_HIT_MODIFIER;
         }
         int firstAbilityDmg = Math.round(damage
-                * Constants.RACE_MODIFIER_BACKSTAB_ROGUE_VS_ROGUE);
+                * (Constants.RACE_MODIFIER_BACKSTAB_ROGUE_VS_ROGUE + angelModifier));
         int secondAbilityDmg = Math.round(paralysis()
-                * Constants.RACE_MODIFIER_PARALYSIS_ROGUE_VS_ROGUE);
+                * (Constants.RACE_MODIFIER_PARALYSIS_ROGUE_VS_ROGUE + angelModifier));
         rogue.setDamageOverTime(secondAbilityDmg);
         if (landModifier != 1) {
             rogue.setRoundsLeftDmg(Constants.PARALYSIS_WOODS_ROUNDS_OVER_TIME);
@@ -82,9 +83,9 @@ public final class Rogue extends Hero {
             damage *= Constants.BACKSTAB_CRITICAL_HIT_MODIFIER;
         }
         int firstAbilityDmg = Math.round(damage
-                * Constants.RACE_MODIFIER_BACKSTAB_ROGUE_VS_PYROMANCER);
+                * (Constants.RACE_MODIFIER_BACKSTAB_ROGUE_VS_PYROMANCER + angelModifier));
         int secondAbilityDmg = Math.round(paralysis()
-                * Constants.RACE_MODIFIER_PARALYSIS_ROGUE_VS_PYROMANCER);
+                * (Constants.RACE_MODIFIER_PARALYSIS_ROGUE_VS_PYROMANCER + angelModifier));
         pyromancer.setDamageOverTime(secondAbilityDmg);
         if (landModifier != 1) {
             pyromancer.setRoundsLeftDmg(Constants.PARALYSIS_WOODS_ROUNDS_OVER_TIME);
@@ -104,9 +105,9 @@ public final class Rogue extends Hero {
             damage *= Constants.BACKSTAB_CRITICAL_HIT_MODIFIER;
         }
         int firstAbilityDmg = Math.round(damage
-                * Constants.RACE_MODIFIER_BACKSTAB_ROGUE_VS_WIZARD);
+                * (Constants.RACE_MODIFIER_BACKSTAB_ROGUE_VS_WIZARD + angelModifier));
         int secondAbilityDmg = Math.round(paralysis()
-                * Constants.RACE_MODIFIER_PARALYSIS_ROGUE_VS_WIZARD);
+                * (Constants.RACE_MODIFIER_PARALYSIS_ROGUE_VS_WIZARD + angelModifier));
         wizard.setDamageOverTime(secondAbilityDmg);
         if (landModifier != 1) {
             wizard.setRoundsLeftDmg(Constants.PARALYSIS_WOODS_ROUNDS_OVER_TIME);
@@ -126,9 +127,9 @@ public final class Rogue extends Hero {
             damage *= Constants.BACKSTAB_CRITICAL_HIT_MODIFIER;
         }
         int firstAbilityDmg = Math.round(damage
-                * Constants.RACE_MODIFIER_BACKSTAB_ROGUE_VS_KNIGHT);
+                * (Constants.RACE_MODIFIER_BACKSTAB_ROGUE_VS_KNIGHT + angelModifier));
         int secondAbilityDmg = Math.round(paralysis()
-                * Constants.RACE_MODIFIER_PARALYSIS_ROGUE_VS_KNIGHT);
+                * (Constants.RACE_MODIFIER_PARALYSIS_ROGUE_VS_KNIGHT + angelModifier));
         knight.setDamageOverTime(secondAbilityDmg);
         if (landModifier != 1) {
             knight.setRoundsLeftDmg(Constants.PARALYSIS_WOODS_ROUNDS_OVER_TIME);

@@ -114,8 +114,79 @@ public final class Constants {
     public static final int BIG_DMG_TO_KILL_EVERYTHING = 30000;
 
 
+
     public static final int LIFEGIVER_GIVEN_HP_FOR_KNIGHT = 100;
     public static final int LIFEGIVER_GIVEN_HP_FOR_PYROMANCER = 80;
     public static final int LIFEGIVER_GIVEN_HP_FOR_ROGUE = 90;
     public static final int LIFEGIVER_GIVEN_HP_FOR_WIZARD = 120;
+
+
+
+    public static final float LEVELUPANGEL_KNIGHT_MODIFIER = 0.1f;
+    public static final float LEVELUPANGEL_PYROMANCER_MODIFIER = 0.2f;
+    public static final float LEVELUPANGEL_ROGUE_MODIFIER = 0.15f;
+    public static final float LEVELUPANGEL_WIZARD_MODIFIER = 0.25f;
+
+
+
+    public static final float DAMAGEANGEL_KNIGHT_MODIFIER = 0.15f;
+    public static final float DAMAGEANGEL_PYROMANCER_MODIFIER = 0.2f;
+    public static final float DAMAGEANGEL_ROGUE_MODIFIER = 0.3f;
+    public static final float DAMAGEANGEL_WIZARD_MODIFIER = 0.4f;
+
+
+
+    public static final int DARKANGEL_TAKEN_HEP_FOR_KNIGHT = 40;
+    public static final int DARKANGEL_TAKEN_HEP_FOR_PYROMANCER = 30;
+    public static final int DARKANGEL_TAKEN_HEP_FOR_ROGUE = 10;
+    public static final int DARKANGEL_TAKEN_HEP_FOR_WIZARD = 20;
+
+
+
+    public static final int DRACULA_TAKEN_HP_FOR_KNIGHT = 60;
+    public static final int DRACULA_TAKEN_HP_FOR_PYROMANCER = 40;
+    public static final int DRACULA_TAKEN_HP_FOR_ROGUE = 35;
+    public static final int DRACULA_TAKEN_HP_FOR_WIZARD = 20;
+
+    public static final float DRACULA_KNIGHT_MODIFIER = -0.2f;
+    public static final float DRACULA_PYROMANCER_MODIFIER = -0.3f;
+    public static final float DRACULA_ROGUE_MODIFIER = -0.1f;
+    public static final float DRACULA_WIZARD_MODIFIER = -0.4f;
+
+
+    public static final float GOODBOY_KNIGHT_MODIFIER = 0.4f;
+    public static final float GOODBOY_PYROMANCER_MODIFIER = 0.5f;
+    public static final float GOODBOY_ROGUE_MODIFIER = 0.4f;
+    public static final float GOODBOY_WIZARD_MODIFIER = 0.3f;
+
+    public static final int GOODBOY_GIVEN_HP_FOR_KNIGHT = 20;
+    public static final int GOODBOY_GIVEN_HP_FOR_PYROMANCER = 30;
+    public static final int GOODBOY_GIVEN_HP_FOR_ROGUE = 40;
+    public static final int GOODBOY_GIVEN_HP_FOR_WIZARD = 50;
+
+
+
+    public static final float SMALLANGEL_KNIGHT_MODIFIER = 0.1f;
+    public static final float SMALLANGEL_PYROMANCER_MODIFIER = 0.15f;
+    public static final float SMALLANGEL_ROGUE_MODIFIER = 0.05f;
+    public static final float SMALLANGEL_WIZARD_MODIFIER = 0.1f;
+
+    public static final int SMALLANGEL_GIVEN_HP_FOR_KNIGHT = 10;
+    public static final int SMALLANGEL_GIVEN_HP_FOR_PYROMANCER = 15;
+    public static final int SMALLANGEL_GIVEN_HP_FOR_ROGUE = 20;
+    public static final int SMALLANGEL_GIVEN_HP_FOR_WIZARD = 25;
+
+
+
+    public static final int XPANGEL_GIVEN_XP_FOR_KNIGHT = 45;
+    public static final int XPANGEL_GIVEN_XP_FOR_PYROMANCER = 50;
+    public static final int XPANGEL_GIVEN_XP_FOR_ROGUE = 40;
+    public static final int XPANGEL_GIVEN_XP_FOR_WIZARD = 60;
+
+
+
+    public static final int SPAWNER_NEW_HP_FOR_KNIGHT = 200;
+    public static final int SPAWNER_NEW_HP_FOR_PYROMANCER = 150;
+    public static final int SPAWNER_NEW_HP_FOR_ROGUE = 180;
+    public static final int SPAWNER_NEW_HP_FOR_WIZARD = 120;
 }

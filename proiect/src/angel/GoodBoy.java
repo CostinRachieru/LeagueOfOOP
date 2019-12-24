@@ -1,5 +1,6 @@
 package angel;
 
+import common.Constants;
 import hero.Coordinates;
 import hero.Rogue;
 import hero.Pyromancer;
@@ -12,14 +13,30 @@ public final class GoodBoy extends Angel {
     }
 
     public void help(final Rogue hero) {
+        if (hero.isAlive()) {
+            hero.modifyAngelModifier(Constants.GOODBOY_ROGUE_MODIFIER);
+            giveHealth(hero, Constants.GOODBOY_GIVEN_HP_FOR_ROGUE);
+        }
     }
 
     public void help(final Knight hero) {
+        if (hero.isAlive()) {
+            hero.modifyAngelModifier(Constants.GOODBOY_KNIGHT_MODIFIER);
+            giveHealth(hero, Constants.GOODBOY_GIVEN_HP_FOR_KNIGHT);
+        }
     }
 
     public void help(final Wizard hero) {
+        if (hero.isAlive()) {
+            hero.modifyAngelModifier(Constants.GOODBOY_WIZARD_MODIFIER);
+            giveHealth(hero, Constants.GOODBOY_GIVEN_HP_FOR_WIZARD);
+        }
     }
 
     public void help(final Pyromancer hero) {
+        if (hero.isAlive()) {
+            hero.modifyAngelModifier(Constants.GOODBOY_PYROMANCER_MODIFIER);
+            giveHealth(hero, Constants.GOODBOY_GIVEN_HP_FOR_PYROMANCER);
+        }
     }
 }

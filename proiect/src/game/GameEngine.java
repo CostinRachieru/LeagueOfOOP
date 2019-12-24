@@ -94,4 +94,18 @@ public final class GameEngine {
             }
         }
     }
+
+    public static void helpHeroes(final ArrayList<ArrayList<Angel>> angels, final int round) {
+        GameMap map = GameMap.getInstance();
+        ArrayList<Angel> angelsThisRound = angels.get(round);
+        for (Angel angel : angelsThisRound) {
+            Coordinates angelLocation = angel.getLocation();
+            ArrayList<Hero> heroesInCell = map.getHeroesInCell(angelLocation);
+            System.out.println(heroesInCell.size());
+            for (int i = 0; i < heroesInCell.size(); ++i) {
+                Hero hero = heroesInCell.get(i);
+                hero.acceptHelp(angel);
+            }
+        }
+    }
 }

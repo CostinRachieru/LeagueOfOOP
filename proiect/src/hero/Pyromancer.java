@@ -13,6 +13,7 @@ public final class Pyromancer extends Hero {
         type = 'P';
         damageOverTime = 0;
         roundsLeftDmg = 0;
+        angelModifier = 0f;
     }
 
     public void acceptHelp(final Angel angel) {
@@ -55,11 +56,11 @@ public final class Pyromancer extends Hero {
     @Override
     public void attack(final Rogue rogue) {
         int firstAbilityDmg = Math.round(fireBlast()
-                * Constants.RACE_MODIFIER_FIREBLAST_PYROMANCER_VS_ROGUE);
+                * (Constants.RACE_MODIFIER_FIREBLAST_PYROMANCER_VS_ROGUE + angelModifier));
         int secondAbilityDmg = Math.round(igniteBase()
-                * Constants.RACE_MODIFIER_IGNITE_PYROMANCER_VS_ROGUE);
+                * (Constants.RACE_MODIFIER_IGNITE_PYROMANCER_VS_ROGUE + angelModifier));
         int secondAbilityDmgOverTime = Math.round(igniteOverTime()
-                * Constants.RACE_MODIFIER_IGNITE_PYROMANCER_VS_ROGUE);
+                * (Constants.RACE_MODIFIER_IGNITE_PYROMANCER_VS_ROGUE + angelModifier));
         rogue.setDamageOverTime(secondAbilityDmgOverTime);
         rogue.setRoundsLeftDmg(Constants.IGNITE_ROUNDS_TO_TAKE_DAMAGE);
 
@@ -70,11 +71,11 @@ public final class Pyromancer extends Hero {
     @Override
     public void attack(final Pyromancer pyromancer) {
         int firstAbilityDmg = Math.round(fireBlast()
-                * Constants.RACE_MODIFIER_FIREBLAST_PYROMANCER_VS_PYROMANCER);
+                * (Constants.RACE_MODIFIER_FIREBLAST_PYROMANCER_VS_PYROMANCER + angelModifier));
         int secondAbilityDmg = Math.round(igniteBase()
-                * Constants.RACE_MODIFIER_IGNITE_PYROMANCER_VS_PYROMANCER);
+                * (Constants.RACE_MODIFIER_IGNITE_PYROMANCER_VS_PYROMANCER + angelModifier));
         int secondAbilityDmgOverTime = Math.round(igniteOverTime()
-                * Constants.RACE_MODIFIER_IGNITE_PYROMANCER_VS_PYROMANCER);
+                * (Constants.RACE_MODIFIER_IGNITE_PYROMANCER_VS_PYROMANCER + angelModifier));
         pyromancer.setDamageOverTime(secondAbilityDmgOverTime);
         pyromancer.setRoundsLeftDmg(Constants.IGNITE_ROUNDS_TO_TAKE_DAMAGE);
 
@@ -85,11 +86,11 @@ public final class Pyromancer extends Hero {
     @Override
     public void attack(final Wizard wizard) {
         int firstAbilityDmg = Math.round(fireBlast()
-                * Constants.RACE_MODIFIER_FIREBLAST_PYROMANCER_VS_WIZARD);
+                * (Constants.RACE_MODIFIER_FIREBLAST_PYROMANCER_VS_WIZARD + angelModifier));
         int secondAbilityDmg = Math.round(igniteBase()
-                * Constants.RACE_MODIFIER_IGNITE_PYROMANCER_VS_WIZARD);
+                * (Constants.RACE_MODIFIER_IGNITE_PYROMANCER_VS_WIZARD + angelModifier));
         int secondAbilityDmgOverTime = Math.round(igniteOverTime()
-                * Constants.RACE_MODIFIER_IGNITE_PYROMANCER_VS_WIZARD);
+                * (Constants.RACE_MODIFIER_IGNITE_PYROMANCER_VS_WIZARD + angelModifier));
         wizard.setDamageOverTime(secondAbilityDmgOverTime);
         wizard.setRoundsLeftDmg(Constants.IGNITE_ROUNDS_TO_TAKE_DAMAGE);
 
@@ -100,11 +101,11 @@ public final class Pyromancer extends Hero {
     @Override
     public void attack(final Knight knight) {
         int firstAbilityDmg = Math.round(fireBlast()
-                * Constants.RACE_MODIFIER_FIREBLAST_PYROMANCER_VS_KNIGHT);
+                * (Constants.RACE_MODIFIER_FIREBLAST_PYROMANCER_VS_KNIGHT + angelModifier));
         int secondAbilityDmg = Math.round(igniteBase()
-                * Constants.RACE_MODIFIER_IGNITE_PYROMANCER_VS_KNIGHT);
+                * (Constants.RACE_MODIFIER_IGNITE_PYROMANCER_VS_KNIGHT + angelModifier));
         int secondAbilityDmgOverTime = Math.round(igniteOverTime()
-                * Constants.RACE_MODIFIER_IGNITE_PYROMANCER_VS_KNIGHT);
+                * (Constants.RACE_MODIFIER_IGNITE_PYROMANCER_VS_KNIGHT + angelModifier));
         knight.setDamageOverTime(secondAbilityDmgOverTime);
         knight.setRoundsLeftDmg(Constants.IGNITE_ROUNDS_TO_TAKE_DAMAGE);
 

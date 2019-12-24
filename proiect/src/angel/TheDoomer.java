@@ -12,14 +12,26 @@ public final class TheDoomer extends Angel {
     }
 
     public void help(final Rogue hero) {
+        if (hero.isAlive()) {
+            hero.sufferDamage(hero.getHealthPoints());
+        }
     }
 
     public void help(final Knight hero) {
+        if (hero.isAlive()) {
+            hero.sufferDamage(hero.getHealthPoints());
+        }
     }
 
     public void help(final Wizard hero) {
+        if (hero.isAlive()) {
+            hero.sufferDamage(hero.getHealthPoints());
+        }
     }
 
     public void help(final Pyromancer hero) {
+        if (hero.isAlive()) {
+            hero.sufferDamage(hero.getHealthPoints());
+        }
     }
 }

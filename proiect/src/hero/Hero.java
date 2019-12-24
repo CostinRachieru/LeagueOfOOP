@@ -16,6 +16,7 @@ public abstract class Hero {
     protected int roundsLeftDmg;
     protected int roundsStunned;
     protected int criticalCount;
+    protected float angelModifier;
 
     public abstract void isAttackedBy(Hero hero);
     public abstract void attack(Rogue rogue);
@@ -55,7 +56,16 @@ public abstract class Hero {
         location.setRow(newRow);
     }
 
-    public final void receiveHealth(int quantity) {
+    public final void modifyAngelModifier(final float modifier) {
+        angelModifier += modifier;
+    }
+
+    public final void newLevel() {
+        level++;
+        experience = Constants.BASE_EXPERIENCE + level * Constants.EXPERIENCE_BETWEEN_LEVELS;
+    }
+
+    public final void receiveHealth(final int quantity) {
         healthPoints += quantity;
     }
 
@@ -86,13 +96,16 @@ public abstract class Hero {
         }
     }
 
+    public void revive(final int newHealthPoints, final Coordinates angelLocation) {
+        this.healthPoints = newHealthPoints;
+        GameMap gameMap = GameMap.getInstance();
+        gameMap.heroGoToCell(this, angelLocation);
+        location = new Coordinates(angelLocation.getLine(), angelLocation.getRow());
+    }
     private void setDeath() {
         healthPoints = 0;
         damageOverTime = 0;
         roundsLeftDmg = 0;
-        leaveCell();
-        location.setRow(-1);
-        location.setLine(-1);
     }
 
     public final void sufferDamage(final int damage) {
@@ -100,6 +113,11 @@ public abstract class Hero {
         if (healthPoints <= 0) {
             setDeath();
         }
+    }
+
+    public final void increaseExperience(final int quantity) {
+        experience += quantity;
+        updateLevel();
     }
 
     public final void updateLevel() {

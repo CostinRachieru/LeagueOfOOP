@@ -13,23 +13,27 @@ public final class LifeGiver extends Angel {
         this.location = location;
     }
 
-    public void giveHealth(final Hero hero, final int quantity) {
-        hero.receiveHealth(quantity);
-    }
-
     public void help(final Rogue hero) {
-        giveHealth(hero, Constants.LIFEGIVER_GIVEN_HP_FOR_ROGUE);
+        if (hero.isAlive()) {
+            giveHealth(hero, Constants.LIFEGIVER_GIVEN_HP_FOR_ROGUE);
+        }
     }
 
     public void help(final Knight hero) {
-        giveHealth(hero, Constants.LIFEGIVER_GIVEN_HP_FOR_KNIGHT);
+        if (hero.isAlive()) {
+            giveHealth(hero, Constants.LIFEGIVER_GIVEN_HP_FOR_KNIGHT);
+        }
     }
 
     public void help(final Wizard hero) {
-        giveHealth(hero, Constants.LIFEGIVER_GIVEN_HP_FOR_WIZARD);
+        if (hero.isAlive()) {
+            giveHealth(hero, Constants.LIFEGIVER_GIVEN_HP_FOR_WIZARD);
+        }
     }
 
     public void help(final Pyromancer hero) {
-        giveHealth(hero, Constants.LIFEGIVER_GIVEN_HP_FOR_PYROMANCER);
+        if (hero.isAlive()) {
+            giveHealth(hero, Constants.LIFEGIVER_GIVEN_HP_FOR_PYROMANCER);
+        }
     }
 }

@@ -13,6 +13,7 @@ public final class Wizard extends Hero {
         type = 'W';
         damageOverTime = 0;
         roundsLeftDmg = 0;
+        angelModifier = 0f;
     }
 
     public void acceptHelp(final Angel angel) {
@@ -58,7 +59,7 @@ public final class Wizard extends Hero {
         float baseOpponentHp = Math.min(Constants.DRAIN_BASE_OPPONENT_HP_PERCENTAGE
                 * opponentMaxHp, opponentCurrentHp);
         int firstAbilityDmg = Math.round(drain(baseOpponentHp)
-                * Constants.RACE_MODIFIER_DRAIN_WIZARD_VS_ROUGE);
+                * (Constants.RACE_MODIFIER_DRAIN_WIZARD_VS_ROUGE + angelModifier));
         float opponentFirstAbilityBaseDmg = rogue.backstab();
         if (rogue.isCritical()) {
             opponentFirstAbilityBaseDmg *= Constants.BACKSTAB_CRITICAL_HIT_MODIFIER;
@@ -67,7 +68,7 @@ public final class Wizard extends Hero {
         int opponentSecondAbilityDmg = Math.round(rogue.paralysis());
         int damageReceived = opponentFirstAbilityDmg + opponentSecondAbilityDmg;
         int secondAbilityDmg = Math.round(deflect(damageReceived)
-                * Constants.RACE_MODIFIER_DEFLECT_WIZARD_VS_ROGUE);
+                * (Constants.RACE_MODIFIER_DEFLECT_WIZARD_VS_ROGUE + angelModifier));
         int damageDealt = firstAbilityDmg + secondAbilityDmg;
         rogue.sufferDamage(damageDealt);
     }
@@ -80,12 +81,12 @@ public final class Wizard extends Hero {
         float baseOpponentHp = Math.min(Constants.DRAIN_BASE_OPPONENT_HP_PERCENTAGE
                 * opponentMaxHp, opponentCurrentHp);
         int firstAbilityDmg = Math.round(drain(baseOpponentHp)
-                * Constants.RACE_MODIFIER_DRAIN_WIZARD_VS_PYROMANCER);
+                * (Constants.RACE_MODIFIER_DRAIN_WIZARD_VS_PYROMANCER + angelModifier));
         int opponentFirstAbilityDmg = Math.round(pyromancer.fireBlast());
         int opponentSecondAbilityDmg = Math.round(pyromancer.igniteBase());
         int damageReceived = opponentFirstAbilityDmg + opponentSecondAbilityDmg;
         int secondAbilityDmg = Math.round(deflect(damageReceived)
-                * Constants.RACE_MODIFIER_DEFLECT_WIZARD_VS_PYROMANCER);
+                * (Constants.RACE_MODIFIER_DEFLECT_WIZARD_VS_PYROMANCER + angelModifier));
         int damageDealt = firstAbilityDmg + secondAbilityDmg;
         pyromancer.sufferDamage(damageDealt);
 
@@ -99,7 +100,7 @@ public final class Wizard extends Hero {
         float baseOpponentHp = Math.min(Constants.DRAIN_BASE_OPPONENT_HP_PERCENTAGE
                 * opponentMaxHp, opponentCurrentHp);
         int firstAbilityDmg = Math.round(drain(baseOpponentHp)
-                * Constants.RACE_MODIFIER_DRAIN_WIZARD_VS_WIZARD);
+                * (Constants.RACE_MODIFIER_DRAIN_WIZARD_VS_WIZARD) + angelModifier);
         int damageDealt = firstAbilityDmg;
         wizard.sufferDamage(damageDealt);
     }
@@ -114,7 +115,7 @@ public final class Wizard extends Hero {
         float baseOpponentHp = Math.min(Constants.DRAIN_BASE_OPPONENT_HP_PERCENTAGE
                 * opponentMaxHp, opponentCurrentHp);
         int firstAbilityDmg = Math.round(drain(baseOpponentHp)
-                * Constants.RACE_MODIFIER_DRAIN_WIZARD_VS_KNIGHT);
+                * (Constants.RACE_MODIFIER_DRAIN_WIZARD_VS_KNIGHT + angelModifier));
         int opponentFirstAbilityDmg = Math.round(knight.execute(ownMaxHp, healthPoints));
         if (opponentFirstAbilityDmg == Constants.BIG_DMG_TO_KILL_EVERYTHING) {
             opponentFirstAbilityDmg = healthPoints;
@@ -122,7 +123,7 @@ public final class Wizard extends Hero {
         int opponentSecondAbilityDmg = Math.round(knight.slam());
         int damageReceived = opponentFirstAbilityDmg + opponentSecondAbilityDmg;
         int secondAbilityDmg = Math.round(deflect(damageReceived)
-                * Constants.RACE_MODIFIER_DEFLECT_WIZARD_VS_KNIGHT);
+                * (Constants.RACE_MODIFIER_DEFLECT_WIZARD_VS_KNIGHT + angelModifier));
         int damageDealt = firstAbilityDmg + secondAbilityDmg;
         knight.sufferDamage(damageDealt);
     }

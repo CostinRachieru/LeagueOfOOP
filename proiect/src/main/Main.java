@@ -3,7 +3,6 @@ package main;
 import angel.Angel;
 import game.GameEngine;
 import gamemap.GameMap;
-import hero.Coordinates;
 import hero.Hero;
 
 import java.util.ArrayList;
@@ -29,6 +28,7 @@ public final class Main {
         for (int round = 0; round < nrRounds; ++round) {
             GameEngine.moveHeroes(round, moves, heroes);
             GameEngine.doCombats(heroes);
+            GameEngine.helpHeroes(angels, round);
         }
         gameInputLoader.write(heroes);
     }

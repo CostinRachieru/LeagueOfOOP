@@ -15,7 +15,7 @@ public final class AngelFactory {
         return instance;
     }
 
-    public static Angel createAngel(final String type, Coordinates location) {
+    public static Angel createAngel(final String type, final Coordinates location) {
         switch (type) {
             case "DamageAngel": return new DamageAngel(location);
             case "DarkAngel": return new DarkAngel(location);

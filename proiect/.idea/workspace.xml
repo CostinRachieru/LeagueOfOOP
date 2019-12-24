@@ -2,25 +2,42 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ea0e8ae3-d339-4667-a474-2c36e2cded76" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/angel/Angel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/angel/AngelFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/angel/DamageAngel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/angel/DarkAngel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/angel/Dracula.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/angel/GoodBoy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/angel/LevelUpAngel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/angel/LifeGiver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/angel/SmallAngel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/angel/Spawner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/angel/TheDoomer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/angel/XPAngel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Output/production/proiect/angel/Angel.class" beforeDir="false" afterPath="$PROJECT_DIR$/Output/production/proiect/angel/Angel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Output/production/proiect/angel/DamageAngel.class" beforeDir="false" afterPath="$PROJECT_DIR$/Output/production/proiect/angel/DamageAngel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Output/production/proiect/angel/DarkAngel.class" beforeDir="false" afterPath="$PROJECT_DIR$/Output/production/proiect/angel/DarkAngel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Output/production/proiect/angel/Dracula.class" beforeDir="false" afterPath="$PROJECT_DIR$/Output/production/proiect/angel/Dracula.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Output/production/proiect/angel/GoodBoy.class" beforeDir="false" afterPath="$PROJECT_DIR$/Output/production/proiect/angel/GoodBoy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Output/production/proiect/angel/LevelUpAngel.class" beforeDir="false" afterPath="$PROJECT_DIR$/Output/production/proiect/angel/LevelUpAngel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Output/production/proiect/angel/LifeGiver.class" beforeDir="false" afterPath="$PROJECT_DIR$/Output/production/proiect/angel/LifeGiver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Output/production/proiect/angel/SmallAngel.class" beforeDir="false" afterPath="$PROJECT_DIR$/Output/production/proiect/angel/SmallAngel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Output/production/proiect/angel/Spawner.class" beforeDir="false" afterPath="$PROJECT_DIR$/Output/production/proiect/angel/Spawner.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Output/production/proiect/angel/TheDoomer.class" beforeDir="false" afterPath="$PROJECT_DIR$/Output/production/proiect/angel/TheDoomer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Output/production/proiect/angel/XPAngel.class" beforeDir="false" afterPath="$PROJECT_DIR$/Output/production/proiect/angel/XPAngel.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Output/production/proiect/game/GameEngine.class" beforeDir="false" afterPath="$PROJECT_DIR$/Output/production/proiect/game/GameEngine.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Output/production/proiect/gamemap/DesertCell.class" beforeDir="false" afterPath="$PROJECT_DIR$/Output/production/proiect/gamemap/DesertCell.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Output/production/proiect/hero/Hero.class" beforeDir="false" afterPath="$PROJECT_DIR$/Output/production/proiect/hero/Hero.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Output/production/proiect/hero/Knight.class" beforeDir="false" afterPath="$PROJECT_DIR$/Output/production/proiect/hero/Knight.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Output/production/proiect/hero/Pyromancer.class" beforeDir="false" afterPath="$PROJECT_DIR$/Output/production/proiect/hero/Pyromancer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Output/production/proiect/hero/Rogue.class" beforeDir="false" afterPath="$PROJECT_DIR$/Output/production/proiect/hero/Rogue.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Output/production/proiect/hero/Wizard.class" beforeDir="false" afterPath="$PROJECT_DIR$/Output/production/proiect/hero/Wizard.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Output/production/proiect/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/Output/production/proiect/main/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/input.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/angel/Angel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/angel/Angel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/angel/AngelFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/angel/AngelFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/angel/DamageAngel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/angel/DamageAngel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/angel/DarkAngel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/angel/DarkAngel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/angel/Dracula.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/angel/Dracula.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/angel/GoodBoy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/angel/GoodBoy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/angel/LevelUpAngel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/angel/LevelUpAngel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/angel/LifeGiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/angel/LifeGiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/angel/SmallAngel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/angel/SmallAngel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/angel/Spawner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/angel/Spawner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/angel/TheDoomer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/angel/TheDoomer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/angel/XPAngel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/angel/XPAngel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/common/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/Constants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/game/GameEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/GameEngine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gamemap/DesertCell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gamemap/DesertCell.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hero/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hero/Hero.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hero/Knight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hero/Knight.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hero/Pyromancer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hero/Pyromancer.java" afterDir="false" />
@@ -120,10 +137,10 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="418" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1577022501324">
+    <state x="418" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1577211738274">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="418" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1577022501324" />
+    <state x="418" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1577211738274" />
     <state x="659" y="357" width="591" height="390" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1575224097082">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -140,22 +157,22 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="737" y="283" width="424" height="513" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1577022921021" />
-    <state width="1874" height="258" key="GridCell.Tab.0.bottom" timestamp="1577202050853">
+    <state width="1874" height="258" key="GridCell.Tab.0.bottom" timestamp="1577212715556">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="258" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1577202050853" />
-    <state width="1874" height="258" key="GridCell.Tab.0.center" timestamp="1577202050853">
+    <state width="1874" height="258" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1577212715556" />
+    <state width="1874" height="258" key="GridCell.Tab.0.center" timestamp="1577212715556">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="258" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1577202050853" />
-    <state width="1874" height="258" key="GridCell.Tab.0.left" timestamp="1577202050853">
+    <state width="1874" height="258" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1577212715556" />
+    <state width="1874" height="258" key="GridCell.Tab.0.left" timestamp="1577212715556">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="258" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1577202050853" />
-    <state width="1874" height="258" key="GridCell.Tab.0.right" timestamp="1577202050853">
+    <state width="1874" height="258" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1577212715556" />
+    <state width="1874" height="258" key="GridCell.Tab.0.right" timestamp="1577212715556">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="258" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1577202050853" />
+    <state width="1874" height="258" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1577212715556" />
     <state width="1874" height="344" key="GridCell.Tab.1.bottom" timestamp="1575194681232">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
