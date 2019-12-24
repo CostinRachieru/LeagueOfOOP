@@ -113,4 +113,9 @@ public final class Constants {
     public static final int EXPERIENCE_GAINED_FOR_LEVEL = 40;
     public static final int BIG_DMG_TO_KILL_EVERYTHING = 30000;
 
+
+    public static final int LIFEGIVER_GIVEN_HP_FOR_KNIGHT = 100;
+    public static final int LIFEGIVER_GIVEN_HP_FOR_PYROMANCER = 80;
+    public static final int LIFEGIVER_GIVEN_HP_FOR_ROGUE = 90;
+    public static final int LIFEGIVER_GIVEN_HP_FOR_WIZARD = 120;
 }

@@ -1,5 +1,6 @@
 package hero;
 
+import angel.Angel;
 import common.Constants;
 import gamemap.GameMap;
 
@@ -22,6 +23,7 @@ public abstract class Hero {
     public abstract void attack(Wizard wizard);
     public abstract void attack(Knight knight);
     public abstract void resetHealthPoints();
+    public abstract void acceptHelp(Angel angel);
 
     private void leaveCell() {
         GameMap gameMap = GameMap.getInstance();
@@ -51,6 +53,10 @@ public abstract class Hero {
     private void moveRight() {
         int newRow = location.getRow() + 1;
         location.setRow(newRow);
+    }
+
+    public final void receiveHealth(int quantity) {
+        healthPoints += quantity;
     }
 
     public final void moveTo(final char nextLocation) {

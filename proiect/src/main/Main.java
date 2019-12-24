@@ -1,5 +1,6 @@
 package main;
 
+import angel.Angel;
 import game.GameEngine;
 import gamemap.GameMap;
 import hero.Coordinates;
@@ -17,6 +18,7 @@ public final class Main {
         GameEngine.initMap(gameInput);
 
         ArrayList<Hero> heroes = GameEngine.initHeroes(gameInput);
+        ArrayList<ArrayList<Angel>> angels = GameEngine.initAngels(gameInput);
         GameMap  map = GameMap.getInstance();
         map.spawnHeroes(heroes);
         /**
@@ -29,8 +31,5 @@ public final class Main {
             GameEngine.doCombats(heroes);
         }
         gameInputLoader.write(heroes);
-        ArrayList<String> angelsType = gameInput.getAngelsType();
-        ArrayList<Coordinates> angelsPosition = gameInput.getAngelsPosition();
-        ArrayList<Integer> angelsPerRound = gameInput.getAngelsPerRound();
     }
 }

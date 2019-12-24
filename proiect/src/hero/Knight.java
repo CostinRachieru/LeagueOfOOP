@@ -1,5 +1,6 @@
 package hero;
 
+import angel.Angel;
 import common.Constants;
 
 public final class Knight extends Hero {
@@ -12,6 +13,11 @@ public final class Knight extends Hero {
         type = 'K';
         damageOverTime = 0;
         roundsLeftDmg = 0;
+    }
+
+    @Override
+    public void acceptHelp(final Angel angel) {
+        angel.help(this);
     }
 
     protected float execute(final int maxOpponentHp, final int currentOpponentHp) {

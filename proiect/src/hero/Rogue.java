@@ -1,5 +1,6 @@
 package hero;
 
+import angel.Angel;
 import common.Constants;
 
 public final class Rogue extends Hero {
@@ -14,6 +15,10 @@ public final class Rogue extends Hero {
         damageOverTime = 0;
         roundsLeftDmg = 0;
         criticalCount = 0;
+    }
+
+    public void acceptHelp(final Angel angel) {
+        angel.help(this);
     }
 
     public void resetHealthPoints() {

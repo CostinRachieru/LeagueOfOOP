@@ -1,5 +1,7 @@
 package game;
 
+import angel.Angel;
+import angel.AngelFactory;
 import gamemap.GameMap;
 import hero.Coordinates;
 import hero.Hero;
@@ -29,6 +31,25 @@ public final class GameEngine {
             heroes.add(heroFactory.createHero(playersType.get(i), line, row, i));
         }
         return heroes;
+    }
+
+    public static ArrayList<ArrayList<Angel>> initAngels(final GameInput gameInput) {
+        ArrayList<String> angelsType = gameInput.getAngelsType();
+        ArrayList<Coordinates> angelsPosition = gameInput.getAngelsPosition();
+        ArrayList<Integer> angelsPerRound = gameInput.getAngelsPerRound();
+        int nrRounds = angelsPerRound.size();
+        ArrayList<ArrayList<Angel>> angels = new ArrayList<>(nrRounds);
+        int counter = 0;
+        for (int i = 0; i < nrRounds; ++i) {
+            int angelsThisRound = angelsPerRound.get(i);
+            angels.add(new ArrayList<>(angelsThisRound));
+            for (int j = 0; j < angelsThisRound; ++j) {
+                angels.get(i).add(AngelFactory.createAngel(angelsType.get(counter),
+                        angelsPosition.get(counter)));
+                counter++;
+            }
+        }
+        return angels;
     }
 
     public static void moveHeroes(final int round, final ArrayList<String> moves,

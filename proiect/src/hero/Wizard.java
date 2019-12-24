@@ -1,5 +1,6 @@
 package hero;
 
+import angel.Angel;
 import common.Constants;
 
 public final class Wizard extends Hero {
@@ -12,6 +13,10 @@ public final class Wizard extends Hero {
         type = 'W';
         damageOverTime = 0;
         roundsLeftDmg = 0;
+    }
+
+    public void acceptHelp(final Angel angel) {
+        angel.help(this);
     }
 
     public void resetHealthPoints() {
