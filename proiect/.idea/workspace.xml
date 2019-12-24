@@ -2,154 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ea0e8ae3-d339-4667-a474-2c36e2cded76" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/proiect.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/proiect.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/checkstyle/checkstyle-7.3-all.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/checkstyle/poo_checks.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/in/3x3.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/in/4x4.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/in/5x5.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/in/dense.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/in/fightKKD.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/in/fightKKL.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/in/fightKKV.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/in/fightKKW.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/in/fightKPD.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/in/fightKPL.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/in/fightKPV.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/in/fightKPW.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/in/fightKRD.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/in/fightKRL.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/in/fightKRV.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/in/fightKRW.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/in/fightKWD.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/in/fightKWL.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/in/fightKWV.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/in/fightKWW.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/in/fightPKD.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/in/fightPKL.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/in/fightPKV.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/in/fightPKW.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/in/fightPPD.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/in/fightPPL.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/in/fightPPV.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/in/fightPPW.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/in/fightPRD.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/in/fightPRL.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/in/fightPRV.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/in/fightPRW.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/in/fightPWD.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/in/fightPWL.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/in/fightPWV.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/in/fightPWW.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/in/fightRKD.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/in/fightRKL.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/in/fightRKV.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/in/fightRKW.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/in/fightRPD.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/in/fightRPL.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/in/fightRPV.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/in/fightRPW.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/in/fightRRD.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/in/fightRRL.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/in/fightRRV.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/in/fightRRW.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/in/fightRWD.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/in/fightRWL.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/in/fightRWV.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/in/fightRWW.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/in/fightWKD.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/in/fightWKL.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/in/fightWKV.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/in/fightWKW.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/in/fightWPD.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/in/fightWPL.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/in/fightWPV.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/in/fightWPW.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/in/fightWRD.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/in/fightWRL.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/in/fightWRV.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/in/fightWRW.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/in/fightWWD.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/in/fightWWL.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/in/fightWWV.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/in/fightWWW.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/res/3x3.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/res/4x4.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/res/5x5.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/res/dense.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/res/fightKKD.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/res/fightKKL.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/res/fightKKV.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/res/fightKKW.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/res/fightKPD.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/res/fightKPL.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/res/fightKPV.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/res/fightKPW.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/res/fightKRD.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/res/fightKRL.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/res/fightKRV.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/res/fightKRW.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/res/fightKWD.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/res/fightKWL.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/res/fightKWV.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/res/fightKWW.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/res/fightPKD.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/res/fightPKL.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/res/fightPKV.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/res/fightPKW.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/res/fightPPD.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/res/fightPPL.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/res/fightPPV.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/res/fightPPW.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/res/fightPRD.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/res/fightPRL.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/res/fightPRV.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/res/fightPRW.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/res/fightPWD.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/res/fightPWL.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/res/fightPWV.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/res/fightPWW.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/res/fightRKD.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/res/fightRKL.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/res/fightRKV.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/res/fightRKW.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/res/fightRPD.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/res/fightRPL.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/res/fightRPV.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/res/fightRPW.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/res/fightRRD.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/res/fightRRL.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/res/fightRRV.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/res/fightRRW.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/res/fightRWD.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/res/fightRWL.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/res/fightRWV.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/res/fightRWW.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/res/fightWKD.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/res/fightWKL.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/res/fightWKV.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/res/fightWKW.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/res/fightWPD.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/res/fightWPL.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/res/fightWPV.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/res/fightWPW.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/res/fightWRD.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/res/fightWRL.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/res/fightWRV.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/res/fightWRW.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/res/fightWWD.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/res/fightWWL.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/res/fightWWV.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checker/resources/res/fightWWW.in.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/checkstyle.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/gamemap/Cell.class" beforeDir="false" afterPath="$PROJECT_DIR$/Output/production/proiect/gamemap/Cell.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Output/production/proiect/FileIO.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Output/production/proiect/META-INF/proiect.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Output/production/proiect/game/GameEngine.class" beforeDir="false" afterPath="$PROJECT_DIR$/Output/production/proiect/game/GameEngine.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Output/production/proiect/gamemap/DesertCell.class" beforeDir="false" afterPath="$PROJECT_DIR$/Output/production/proiect/gamemap/DesertCell.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/proiect/gamemap/GameMap.class" beforeDir="false" afterPath="$PROJECT_DIR$/Output/production/proiect/gamemap/GameMap.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Output/production/proiect/hero/Hero.class" beforeDir="false" afterPath="$PROJECT_DIR$/Output/production/proiect/hero/Hero.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Output/production/proiect/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/Output/production/proiect/main/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/README" beforeDir="false" afterPath="$PROJECT_DIR$/src/README" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/game/GameEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/GameEngine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gamemap/DesertCell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gamemap/DesertCell.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hero/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hero/Hero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/GameInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/GameInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/GameInputLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/GameInputLoader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -177,8 +42,10 @@
     <option name="showMembers" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/FileIO.jar!/" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../checker/checkstyle/poo_checks.xml" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="org.infernus.idea.checkstyle.CheckStyleConfigurable" />
@@ -242,38 +109,42 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="418" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1575202446675">
+    <state x="418" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1577022501324">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="418" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1575202446675" />
+    <state x="418" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1577022501324" />
     <state x="659" y="357" width="591" height="390" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1575224097082">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="659" y="357" width="591" height="390" key="#com.intellij.fileTypes.FileTypeChooser/0.27.1920.1053@0.27.1920.1053" timestamp="1575224097082" />
-    <state x="768" y="256" width="374" height="592" key="#com.intellij.ide.util.MemberChooser" timestamp="1575124106236">
+    <state x="768" y="256" width="374" height="592" key="#com.intellij.ide.util.MemberChooser" timestamp="1577189027970">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="768" y="256" width="374" height="592" key="#com.intellij.ide.util.MemberChooser/0.27.1920.1053@0.27.1920.1053" timestamp="1575124106236" />
-    <state x="737" y="283" width="424" height="513" key="FileChooserDialogImpl" timestamp="1575216950176">
+    <state x="768" y="256" width="374" height="592" key="#com.intellij.ide.util.MemberChooser/0.27.1920.1053@0.27.1920.1053" timestamp="1577189027970" />
+    <state x="794" y="323" width="324" height="572" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog" timestamp="1577022796713">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="737" y="283" width="424" height="513" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1575216950176" />
-    <state width="1874" height="258" key="GridCell.Tab.0.bottom" timestamp="1575225751949">
+    <state x="794" y="323" width="324" height="572" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1577022796713" />
+    <state x="737" y="283" width="424" height="513" key="FileChooserDialogImpl" timestamp="1577022921021">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="258" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1575225751949" />
-    <state width="1874" height="258" key="GridCell.Tab.0.center" timestamp="1575225751947">
+    <state x="737" y="283" width="424" height="513" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1577022921021" />
+    <state width="1874" height="258" key="GridCell.Tab.0.bottom" timestamp="1577191477895">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="258" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1575225751947" />
-    <state width="1874" height="258" key="GridCell.Tab.0.left" timestamp="1575225751946">
+    <state width="1874" height="258" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1577191477895" />
+    <state width="1874" height="258" key="GridCell.Tab.0.center" timestamp="1577191477893">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="258" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1575225751946" />
-    <state width="1874" height="258" key="GridCell.Tab.0.right" timestamp="1575225751948">
+    <state width="1874" height="258" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1577191477893" />
+    <state width="1874" height="258" key="GridCell.Tab.0.left" timestamp="1577191477892">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="258" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1575225751948" />
+    <state width="1874" height="258" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1577191477892" />
+    <state width="1874" height="258" key="GridCell.Tab.0.right" timestamp="1577191477894">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1874" height="258" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1577191477894" />
     <state width="1874" height="344" key="GridCell.Tab.1.bottom" timestamp="1575194681232">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -290,10 +161,10 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state width="1874" height="344" key="GridCell.Tab.1.right/0.27.1920.1053@0.27.1920.1053" timestamp="1575194681232" />
-    <state x="449" y="187" width="1024" height="845" key="SettingsEditor" timestamp="1575216957027">
+    <state x="449" y="187" width="1024" height="845" key="SettingsEditor" timestamp="1577022942274">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="449" y="187" width="1024" height="845" key="SettingsEditor/0.27.1920.1053@0.27.1920.1053" timestamp="1575216957027" />
+    <state x="449" y="187" width="1024" height="845" key="SettingsEditor/0.27.1920.1053@0.27.1920.1053" timestamp="1577022942274" />
     <state x="624" y="253" key="run.anything.popup" timestamp="1575196231601">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>

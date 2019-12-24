@@ -6,15 +6,14 @@ import fileio.FileSystem;
 import hero.Coordinates;
 import hero.Hero;
 
+
 public class GameInputLoader {
     private final String mInputPath;
     private final String mOutputPath;
-//    private final FileSystem fs;
 
     GameInputLoader(final String inputPath, final String outputPath) {
         mInputPath = inputPath;
         mOutputPath = outputPath;
-//        fs = new FileSystem(mInputPath, mOutputPath);
     }
 
     public final GameInput load() {
@@ -26,6 +25,9 @@ public class GameInputLoader {
         ArrayList<Coordinates> playersPosition = new ArrayList<>();
         int nrRounds = 0;
         ArrayList<String> moves = new ArrayList<>();
+        ArrayList<String> angelsType = new ArrayList<>();
+        ArrayList<Coordinates> angelsPosition =  new ArrayList<>();
+        ArrayList<Integer> numberOfAngelsPerRound = new ArrayList<>();
 
         try {
             FileSystem fs = new FileSystem(mInputPath, mOutputPath);
@@ -50,13 +52,26 @@ public class GameInputLoader {
                 moves.add(fs.nextWord());
             }
 
+            for (int i = 0; i < nrRounds; ++i) {
+                int nrThisRound = fs.nextInt();
+                numberOfAngelsPerRound.add(nrThisRound);
+                for (int j = 0; j < nrThisRound; ++j) {
+                    String angel = fs.nextWord();
+                    String[] angelAndPosition = angel.split(",");
+                    angelsType.add(angelAndPosition[0]);
+                    int line = Integer.parseInt(angelAndPosition[1]);
+                    int column = Integer.parseInt(angelAndPosition[2]);
+                    angelsPosition.add(new Coordinates(line, column));
+                }
+            }
+
             fs.close();
         } catch (Exception e1) {
             e1.printStackTrace();
         }
 
-        return new GameInput(mapHeight, mapWidth, map, nrHeroes, playersType,
-                playersPosition, moves);
+        return new GameInput(mapHeight, mapWidth, map, playersType, playersPosition,
+                moves, angelsType, angelsPosition, numberOfAngelsPerRound);
     }
     public final void write(final ArrayList<Hero> heroes) {
         try {

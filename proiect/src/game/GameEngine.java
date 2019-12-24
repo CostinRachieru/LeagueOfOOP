@@ -67,9 +67,6 @@ public final class GameEngine {
                     if (secondHero.isAlive() && !firstHero.isAlive()) {
                         secondHero.kill(firstHero);
                     }
-                    /**
-                     * criticalCount is the same with the current round playing.
-                     */
                     firstHero.increaseCriticalCount();
                     secondHero.increaseCriticalCount();
                 }

@@ -2,6 +2,7 @@ package main;
 
 import game.GameEngine;
 import gamemap.GameMap;
+import hero.Coordinates;
 import hero.Hero;
 
 import java.util.ArrayList;
@@ -28,5 +29,8 @@ public final class Main {
             GameEngine.doCombats(heroes);
         }
         gameInputLoader.write(heroes);
+        ArrayList<String> angelsType = gameInput.getAngelsType();
+        ArrayList<Coordinates> angelsPosition = gameInput.getAngelsPosition();
+        ArrayList<Integer> angelsPerRound = gameInput.getAngelsPerRound();
     }
 }
