@@ -1,7 +1,6 @@
 package angel;
 
 import common.Constants;
-import hero.Hero;
 import hero.Coordinates;
 import hero.Rogue;
 import hero.Pyromancer;

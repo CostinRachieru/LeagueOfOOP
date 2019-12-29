@@ -2,6 +2,9 @@ package hero;
 
 import angel.Angel;
 import common.Constants;
+import strategy.BasicKnight;
+import strategy.LowHpKnight;
+import strategy.SuperLowHpKnight;
 
 public final class Knight extends Hero {
     public Knight(final int line, final int row, final int givenId) {
@@ -14,7 +17,10 @@ public final class Knight extends Hero {
         damageOverTime = 0;
         roundsLeftDmg = 0;
         angelModifier = 0f;
+        playerStrategy = new BasicKnight();
     }
+
+
 
     @Override
     public void acceptHelp(final Angel angel) {
@@ -56,6 +62,37 @@ public final class Knight extends Hero {
     }
 
     @Override
+    public void choseStrategy() {
+        if (!this.isStunned()) {
+            float maxPossibleHp = Constants.KNIGHT_BASE_HEALTHPOINTS + level
+                    * Constants.KNIGHT_HEALTHPOINTS_PER_LEVEL;
+            float minHp = ((float) 1 / (float) Constants.KNIGHT_MIN_LOW_HP_DENOMINATOR)
+                    * maxPossibleHp;
+            float maxHp = ((float) 1 / (float) Constants.KNIGHT_MAX_LOW_HP_DENOMINATOR)
+                    * maxPossibleHp;
+            if ((float) healthPoints > minHp && (float) healthPoints < maxHp) {
+                playerStrategy = new LowHpKnight();
+            } else {
+                if ((float) healthPoints < minHp) {
+                    playerStrategy = new SuperLowHpKnight();
+                } else {
+                    playerStrategy = new BasicKnight();
+                }
+            }
+        }
+    }
+
+    @Override
+    public void receiveHealth(final int quantity) {
+        healthPoints += quantity;
+        int maxPossibleHp = Constants.KNIGHT_BASE_HEALTHPOINTS + level
+                * Constants.KNIGHT_HEALTHPOINTS_PER_LEVEL;
+        if (healthPoints > maxPossibleHp) {
+            healthPoints = maxPossibleHp;
+        }
+    }
+
+    @Override
     public void attack(final Rogue rogue) {
         int maxOpponentHp = Constants.ROGUE_BASE_HEALTHPOINTS + rogue.getLevel()
                 * Constants.ROGUE_HEALTHPOINTS_PER_LEVEL;
@@ -75,11 +112,14 @@ public final class Knight extends Hero {
                 * Constants.PYROMANCER_HEALTHPOINTS_PER_LEVEL;
         int firstAbilityDmg;
         firstAbilityDmg = Math.round(execute(maxOpponentHp, pyromancer.getHealthPoints())
-                * (Constants.RACE_MODIFIER_EXECUTE_KNIGHT_VS_PYROMANCER + angelModifier));
+                * (Constants.RACE_MODIFIER_EXECUTE_KNIGHT_VS_PYROMANCER + angelModifier
+                + strategyBonus));
         int secondAbilityDmg = Math.round(slam()
-                * (Constants.RACE_MODIFIER_SLAM_KNIGHT_VS_PYROMANCER + angelModifier));
+                * (Constants.RACE_MODIFIER_SLAM_KNIGHT_VS_PYROMANCER + angelModifier
+                + strategyBonus));
         pyromancer.setRoundsStunned(1);
         int damageDealt = firstAbilityDmg + secondAbilityDmg;
+        System.out.println(angelModifier);
         pyromancer.sufferDamage(damageDealt);
     }
 
@@ -102,7 +142,7 @@ public final class Knight extends Hero {
                 * Constants.KNIGHT_HEALTHPOINTS_PER_LEVEL;
         int firstAbilityDmg;
         firstAbilityDmg = Math.round(execute(maxOpponentHp, knight.getHealthPoints())
-                * (Constants.RACE_MODIFIER_EXECUTE_KNIGHT_VS_KNIGHT + angelModifier));
+                * Constants.RACE_MODIFIER_EXECUTE_KNIGHT_VS_KNIGHT);
         int secondAbilityDmg = Math.round(slam()
                 * (Constants.RACE_MODIFIER_SLAM_KNIGHT_VS_KNIGHT + angelModifier));
         knight.setRoundsStunned(1);

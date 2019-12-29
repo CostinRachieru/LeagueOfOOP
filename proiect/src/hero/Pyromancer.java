@@ -2,6 +2,9 @@ package hero;
 
 import angel.Angel;
 import common.Constants;
+import strategy.BasicPyromancer;
+import strategy.LowHpPyromancer;
+import strategy.SuperLowHpPyromancer;
 
 public final class Pyromancer extends Hero {
     public Pyromancer(final int line, final int row, final int givenId) {
@@ -14,6 +17,7 @@ public final class Pyromancer extends Hero {
         damageOverTime = 0;
         roundsLeftDmg = 0;
         angelModifier = 0f;
+        playerStrategy = new BasicPyromancer();
     }
 
     public void acceptHelp(final Angel angel) {
@@ -51,6 +55,37 @@ public final class Pyromancer extends Hero {
     @Override
     public void isAttackedBy(final Hero hero) {
         hero.attack(this);
+    }
+
+    @Override
+    public void choseStrategy() {
+        if (!this.isStunned()) {
+            int maxPossibleHp = (Constants.PYROMANCER_BASE_HEALTHPOINTS + level
+                    * Constants.PYROMANCER_HEALTHPOINTS_PER_LEVEL);
+            float minHp = ((float) 1 / (float) Constants.PYROMANCER_MIN_LOW_HP_DENOMINATOR)
+                    * maxPossibleHp;
+            float maxHp = ((float) 1 / (float) Constants.PYROMANCER_MAX_LOW_HP_DENOMINATOR)
+                    * maxPossibleHp;
+            if ((float) healthPoints > minHp && (float) healthPoints < maxHp) {
+                playerStrategy = new LowHpPyromancer();
+            } else {
+                if ((float) healthPoints < minHp) {
+                    playerStrategy = new SuperLowHpPyromancer();
+                } else {
+                    playerStrategy = new BasicPyromancer();
+                }
+            }
+        }
+    }
+
+    @Override
+    public void receiveHealth(final int quantity) {
+        healthPoints += quantity;
+        int maxPossibleHp = Constants.PYROMANCER_BASE_HEALTHPOINTS + level
+                * Constants.PYROMANCER_HEALTHPOINTS_PER_LEVEL;
+        if (healthPoints > maxPossibleHp) {
+            healthPoints = maxPossibleHp;
+        }
     }
 
     @Override
@@ -110,6 +145,13 @@ public final class Pyromancer extends Hero {
         knight.setRoundsLeftDmg(Constants.IGNITE_ROUNDS_TO_TAKE_DAMAGE);
 
         int damageDealt = firstAbilityDmg + secondAbilityDmg;
+//        System.out.println();
+//        System.out.println(fireBlast()
+//                * (Constants.RACE_MODIFIER_FIREBLAST_PYROMANCER_VS_KNIGHT));
+//        System.out.println(igniteBase()
+//                * (Constants.RACE_MODIFIER_IGNITE_PYROMANCER_VS_KNIGHT));
+//        System.out.println(damageDealt);
+//        System.out.println();
         knight.sufferDamage(damageDealt);
     }
 }

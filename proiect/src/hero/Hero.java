@@ -3,6 +3,7 @@ package hero;
 import angel.Angel;
 import common.Constants;
 import gamemap.GameMap;
+import strategy.Strategy;
 
 public abstract class Hero {
     protected int id;
@@ -17,13 +18,19 @@ public abstract class Hero {
     protected int roundsStunned;
     protected int criticalCount;
     protected float angelModifier;
+    protected float strategyBonus;
+    protected Strategy playerStrategy;
 
     public abstract void isAttackedBy(Hero hero);
+
+    public abstract void choseStrategy();
     public abstract void attack(Rogue rogue);
     public abstract void attack(Pyromancer pyromancer);
     public abstract void attack(Wizard wizard);
     public abstract void attack(Knight knight);
     public abstract void resetHealthPoints();
+    public abstract void receiveHealth(int quantity);
+
     public abstract void acceptHelp(Angel angel);
 
     private void leaveCell() {
@@ -34,6 +41,10 @@ public abstract class Hero {
     private void goToCell() {
         GameMap gameMap = GameMap.getInstance();
         gameMap.heroGoToCell(this, location);
+    }
+
+    public float getLandModifier() {
+        return landModifier;
     }
 
     private void moveUp() {
@@ -56,6 +67,15 @@ public abstract class Hero {
         location.setRow(newRow);
     }
 
+    public final void applyStrategy() {
+        playerStrategy.modifyDmgBonus(this);
+        playerStrategy.modifyHp(this);
+    }
+
+    public final void setStrategyBonus(final float strategyBonus) {
+        this.strategyBonus = strategyBonus;
+    }
+
     public final void modifyAngelModifier(final float modifier) {
         angelModifier += modifier;
     }
@@ -63,10 +83,7 @@ public abstract class Hero {
     public final void newLevel() {
         level++;
         experience = Constants.BASE_EXPERIENCE + level * Constants.EXPERIENCE_BETWEEN_LEVELS;
-    }
-
-    public final void receiveHealth(final int quantity) {
-        healthPoints += quantity;
+        resetHealthPoints();
     }
 
     public final void moveTo(final char nextLocation) {
@@ -96,12 +113,13 @@ public abstract class Hero {
         }
     }
 
-    public void revive(final int newHealthPoints, final Coordinates angelLocation) {
+    public final void revive(final int newHealthPoints, final Coordinates angelLocation) {
         this.healthPoints = newHealthPoints;
         GameMap gameMap = GameMap.getInstance();
         gameMap.heroGoToCell(this, angelLocation);
         location = new Coordinates(angelLocation.getLine(), angelLocation.getRow());
     }
+
     private void setDeath() {
         healthPoints = 0;
         damageOverTime = 0;
@@ -140,6 +158,12 @@ public abstract class Hero {
         if (experience > Constants.EXPERIENCE_FOR_FIRST_LEVEL) {
             updateLevel();
         }
+    }
+    public final boolean isNowStunned() {
+        if (roundsStunned == 0) {
+            return false;
+        }
+        return true;
     }
 
     public final boolean isStunned() {

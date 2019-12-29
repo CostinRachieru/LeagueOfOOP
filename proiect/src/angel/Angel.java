@@ -1,6 +1,12 @@
 package angel;
 
-import hero.*;
+import hero.Coordinates;
+import hero.Knight;
+import hero.Pyromancer;
+import hero.Rogue;
+import hero.Wizard;
+import hero.Hero;
+
 
 public abstract class Angel {
     protected Coordinates location;
@@ -9,7 +15,7 @@ public abstract class Angel {
     public abstract void help(Pyromancer pyromancer);
     public abstract void help(Wizard wizard);
 
-    protected void giveHealth(final Hero hero, final int quantity) {
+    protected final void giveHealth(final Hero hero, final int quantity) {
         if (hero.isAlive()) {
             hero.receiveHealth(quantity);
         }

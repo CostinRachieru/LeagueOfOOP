@@ -2,6 +2,9 @@ package hero;
 
 import angel.Angel;
 import common.Constants;
+import strategy.BasicRogue;
+import strategy.LowHpRogue;
+import strategy.SuperLowHpRogue;
 
 public final class Rogue extends Hero {
 
@@ -16,6 +19,7 @@ public final class Rogue extends Hero {
         roundsLeftDmg = 0;
         criticalCount = 0;
         angelModifier = 0f;
+        playerStrategy = new BasicRogue();
     }
 
     public void acceptHelp(final Angel angel) {
@@ -52,6 +56,37 @@ public final class Rogue extends Hero {
     @Override
     public void isAttackedBy(final Hero hero) {
         hero.attack(this);
+    }
+
+    @Override
+    public void choseStrategy() {
+        if (!this.isStunned()) {
+            int maxPossibleHp = (Constants.ROGUE_BASE_HEALTHPOINTS + level
+                    * Constants.ROGUE_HEALTHPOINTS_PER_LEVEL);
+            float minHp = ((float) 1 / (float) Constants.ROGUE_MIN_LOW_HP_DENOMINATOR)
+                    * maxPossibleHp;
+            float maxHp = ((float) 1 / (float) Constants.ROGUE_MAX_LOW_HP_DENOMINATOR)
+                    * maxPossibleHp;
+            if ((float) healthPoints > minHp && (float) healthPoints < maxHp) {
+                playerStrategy = new LowHpRogue();
+            } else {
+                if ((float) healthPoints < minHp) {
+                    playerStrategy = new SuperLowHpRogue();
+                } else {
+                    playerStrategy = new BasicRogue();
+                }
+            }
+        }
+    }
+
+    @Override
+    public void receiveHealth(final int quantity) {
+        healthPoints += quantity;
+        int maxPossibleHp = Constants.ROGUE_BASE_HEALTHPOINTS + level
+                * Constants.ROGUE_HEALTHPOINTS_PER_LEVEL;
+        if (healthPoints > maxPossibleHp) {
+            healthPoints = maxPossibleHp;
+        }
     }
 
     @Override

@@ -63,7 +63,7 @@ public final class GameEngine {
             hero.sufferDamageOverTime();
             char nextLocation = movesThisRound.charAt(whichHero);
             if (hero.isAlive()) {
-                if (!hero.isStunned()) {
+                if (!hero.isNowStunned()) {
                     hero.moveTo(nextLocation);
                 }
             }
@@ -78,8 +78,8 @@ public final class GameEngine {
                 Coordinates location = hero.getLocation();
                 if (map.isCombat(location)) {
                     ArrayList<Hero> heroesToFight = map.getHeroesInCell(location);
-                    Hero firstHero = heroesToFight.get(0); // P
-                    Hero secondHero = heroesToFight.get(1); // K
+                    Hero firstHero = heroesToFight.get(0);
+                    Hero secondHero = heroesToFight.get(1);
                     secondHero.isAttackedBy(firstHero);
                     firstHero.isAttackedBy(secondHero);
                     if (firstHero.isAlive() && !secondHero.isAlive()) {
@@ -101,11 +101,19 @@ public final class GameEngine {
         for (Angel angel : angelsThisRound) {
             Coordinates angelLocation = angel.getLocation();
             ArrayList<Hero> heroesInCell = map.getHeroesInCell(angelLocation);
-            System.out.println(heroesInCell.size());
             for (int i = 0; i < heroesInCell.size(); ++i) {
                 Hero hero = heroesInCell.get(i);
+                System.out.print(hero.getType() + ": " + hero.getHealthPoints() + " - ");
                 hero.acceptHelp(angel);
+                System.out.println(hero.getHealthPoints());
             }
+            System.out.println();
+        }
+    }
+    public static void heroesChoseStrategy(final ArrayList<Hero> heroes) {
+        for (Hero hero : heroes) {
+            hero.choseStrategy();
+            hero.applyStrategy();
         }
     }
 }

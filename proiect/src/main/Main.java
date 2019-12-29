@@ -27,6 +27,9 @@ public final class Main {
         int nrRounds = moves.size();
         for (int round = 0; round < nrRounds; ++round) {
             GameEngine.moveHeroes(round, moves, heroes);
+            if (round != 0) {
+                GameEngine.heroesChoseStrategy(heroes);
+            }
             GameEngine.doCombats(heroes);
             GameEngine.helpHeroes(angels, round);
         }

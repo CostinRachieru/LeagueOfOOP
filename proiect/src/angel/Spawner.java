@@ -20,19 +20,19 @@ public final class Spawner extends Angel {
 
     public void help(final Knight hero) {
         if (!hero.isAlive()) {
-            hero.revive(Constants.SPAWNER_NEW_HP_FOR_ROGUE, location);
+            hero.revive(Constants.SPAWNER_NEW_HP_FOR_KNIGHT, location);
         }
     }
 
     public void help(final Wizard hero) {
         if (!hero.isAlive()) {
-            hero.revive(Constants.SPAWNER_NEW_HP_FOR_ROGUE, location);
+            hero.revive(Constants.SPAWNER_NEW_HP_FOR_WIZARD, location);
         }
     }
 
     public void help(final Pyromancer hero) {
         if (!hero.isAlive()) {
-            hero.revive(Constants.SPAWNER_NEW_HP_FOR_ROGUE, location);
+            hero.revive(Constants.SPAWNER_NEW_HP_FOR_PYROMANCER, location);
         }
     }
 }

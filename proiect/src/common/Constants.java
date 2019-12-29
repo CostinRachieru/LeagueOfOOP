@@ -189,4 +189,47 @@ public final class Constants {
     public static final int SPAWNER_NEW_HP_FOR_PYROMANCER = 150;
     public static final int SPAWNER_NEW_HP_FOR_ROGUE = 180;
     public static final int SPAWNER_NEW_HP_FOR_WIZARD = 120;
+
+
+    public static final int KNIGHT_MIN_LOW_HP_DENOMINATOR = 3;
+    public static final int KNIGHT_MAX_LOW_HP_DENOMINATOR = 2;
+
+    public static final int KNIGHT_LOW_HP_STRATEGY_HP_LOST_DENOMINATOR = 5;
+    public static final float KNIGHT_LOW_HP_STRATEGY_BONUS_MODIFIER = 0.5f;
+
+    public static final int KNIGHT_SUPER_LOW_HP_STRATEGY_HP_GAINED_DENOMINATOR = 4;
+    public static final float KNIGHT_SUPER_LOW_HP_STRATEGY_DECREASED_MODIFIER = -0.2f;
+
+
+
+    public static final int ROGUE_MIN_LOW_HP_DENOMINATOR = 7;
+    public static final int ROGUE_MAX_LOW_HP_DENOMINATOR = 5;
+
+    public static final int ROGUE_LOW_HP_STRATEGY_HP_LOST_DENOMINATOR = 7;
+    public static final float ROGUE_LOW_HP_STRATEGY_BONUS_MODIFIER = 0.4f;
+
+    public static final int ROGUE_SUPER_LOW_HP_STRATEGY_HP_GAINED_DENOMINATOR = 2;
+    public static final float ROGUE_SUPER_LOW_HP_STRATEGY_DECREASED_MODIFIER = -0.1f;
+
+
+
+    public static final int PYROMANCER_MIN_LOW_HP_DENOMINATOR = 4;
+    public static final int PYROMANCER_MAX_LOW_HP_DENOMINATOR = 3;
+
+    public static final int PYROMANCER_LOW_HP_STRATEGY_HP_LOST_DENOMINATOR = 4;
+    public static final float PYROMANCER_LOW_HP_STRATEGY_BONUS_MODIFIER = 0.7f;
+
+    public static final int PYROMANCER_SUPER_LOW_HP_STRATEGY_HP_GAINED_DENOMINATOR = 3;
+    public static final float PYROMANCER_SUPER_LOW_HP_STRATEGY_DECREASED_MODIFIER = -0.3f;
+
+
+
+    public static final int WIZARD_MIN_LOW_HP_DENOMINATOR = 4;
+    public static final int WIZARD_MAX_LOW_HP_DENOMINATOR = 2;
+
+    public static final int WIZARD_LOW_HP_STRATEGY_HP_LOST_DENOMINATOR = 10;
+    public static final float WIZARD_LOW_HP_STRATEGY_BONUS_MODIFIER = 0.6f;
+
+    public static final int WIZARD_SUPER_LOW_HP_STRATEGY_HP_GAINED_DENOMINATOR = 5;
+    public static final float WIZARD_SUPER_LOW_HP_STRATEGY_DECREASED_MODIFIER = -0.2f;
 }
