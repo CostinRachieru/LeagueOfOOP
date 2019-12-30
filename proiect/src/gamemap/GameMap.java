@@ -47,13 +47,17 @@ public final class GameMap {
     }
 
     public void heroGoToCell(final Hero hero, final Coordinates location) {
-        Cell cell = getCell(location);
-        cell.addHero(hero);
+//        if (location.getRow() >= 0 && location.getLine() >= 0) {
+            Cell cell = getCell(location);
+            cell.addHero(hero);
+//        }
     }
 
     public boolean isCombat(final Coordinates location) {
-        if (getCell(location).isCombat()) {
-            return true;
+        if (location.getRow() >= 0 && location.getLine() >= 0) {
+            if (getCell(location).isCombat()) {
+                return true;
+            }
         }
         return false;
     }

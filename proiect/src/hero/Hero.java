@@ -3,9 +3,13 @@ package hero;
 import angel.Angel;
 import common.Constants;
 import gamemap.GameMap;
+import observer.Observer;
 import strategy.Strategy;
 
+import java.util.ArrayList;
+
 public abstract class Hero {
+    protected String name;
     protected int id;
     protected Coordinates location;
     protected int experience;
@@ -20,6 +24,7 @@ public abstract class Hero {
     protected float angelModifier;
     protected float strategyBonus;
     protected Strategy playerStrategy;
+    protected ArrayList<Observer> observers = new ArrayList<>();
 
     public abstract void isAttackedBy(Hero hero);
 
@@ -35,36 +40,52 @@ public abstract class Hero {
 
     private void leaveCell() {
         GameMap gameMap = GameMap.getInstance();
-        gameMap.heroLeaveCell(this, location);
+        if (location.getLine() >= 0 && location.getRow() >= 0) {
+            gameMap.heroLeaveCell(this, location);
+        }
     }
 
     private void goToCell() {
         GameMap gameMap = GameMap.getInstance();
-        gameMap.heroGoToCell(this, location);
+        if (location.getLine() >= 0 && location.getRow() > 0) {
+            gameMap.heroGoToCell(this, location);
+        }
     }
 
-    public float getLandModifier() {
+    public final float getLandModifier() {
         return landModifier;
     }
 
     private void moveUp() {
+        leaveCell();
         int newLine = location.getLine() - 1;
         location.setLine(newLine);
+        goToCell();
     }
 
     private void moveDown() {
+        leaveCell();
         int newLine = location.getLine() + 1;
         location.setLine(newLine);
+        goToCell();
     }
 
     private void moveLeft() {
+        leaveCell();
         int newRow = location.getRow() - 1;
         location.setRow(newRow);
+        goToCell();
     }
 
     private void moveRight() {
+        leaveCell();
         int newRow = location.getRow() + 1;
         location.setRow(newRow);
+        goToCell();
+    }
+
+    public final void registerObserver(final Observer observer) {
+        observers.add(observer);
     }
 
     public final void applyStrategy() {
@@ -73,7 +94,7 @@ public abstract class Hero {
     }
 
     public final void setStrategyBonus(final float strategyBonus) {
-        this.strategyBonus = strategyBonus;
+        this.strategyBonus += strategyBonus;
     }
 
     public final void modifyAngelModifier(final float modifier) {
@@ -81,13 +102,11 @@ public abstract class Hero {
     }
 
     public final void newLevel() {
-        level++;
-        experience = Constants.BASE_EXPERIENCE + level * Constants.EXPERIENCE_BETWEEN_LEVELS;
-        resetHealthPoints();
+        experience = Constants.BASE_EXPERIENCE + (level + 1) * Constants.EXPERIENCE_BETWEEN_LEVELS;
+        updateLevel();
     }
 
     public final void moveTo(final char nextLocation) {
-        leaveCell();
         switch (nextLocation) {
             case 'U': moveUp(); break;
             case 'D': moveDown(); break;
@@ -96,7 +115,6 @@ public abstract class Hero {
             case '_': break;
             default: break;
         }
-        goToCell();
     }
 
     public final boolean sameAs(final Hero hero) {
@@ -115,15 +133,11 @@ public abstract class Hero {
 
     public final void revive(final int newHealthPoints, final Coordinates angelLocation) {
         this.healthPoints = newHealthPoints;
-        GameMap gameMap = GameMap.getInstance();
-        gameMap.heroGoToCell(this, angelLocation);
-        location = new Coordinates(angelLocation.getLine(), angelLocation.getRow());
+        notifyReviving();
     }
 
     private void setDeath() {
         healthPoints = 0;
-        damageOverTime = 0;
-        roundsLeftDmg = 0;
     }
 
     public final void sufferDamage(final int damage) {
@@ -139,15 +153,23 @@ public abstract class Hero {
     }
 
     public final void updateLevel() {
-        int newlevel = (experience - Constants.BASE_EXPERIENCE)
+        int newLevel = (experience - Constants.BASE_EXPERIENCE)
                 / Constants.EXPERIENCE_BETWEEN_LEVELS;
-        if (newlevel > level) {
-            level = newlevel;
+        if (newLevel > level) {
+            while (level < newLevel) {
+                level++;
+                notifyNewLevel();
+            }
             resetHealthPoints();
         }
     }
 
+    public final String getName() {
+        return name;
+    }
+
     public final void kill(final Hero hero) {
+        notifyKilling(hero.getName());
         int opponentLevel = hero.getLevel();
         int experienceGained = Constants.BASE_EXPERIENCE - (level - opponentLevel)
                 * Constants.EXPERIENCE_GAINED_FOR_LEVEL;
@@ -159,6 +181,25 @@ public abstract class Hero {
             updateLevel();
         }
     }
+
+    public final void notifyKilling(String killed) {
+        for (Observer observer : observers) {
+            observer.update(name, killed);
+        }
+    }
+
+    public final void notifyNewLevel() {
+        for (Observer observer : observers) {
+            observer.update(name, level);
+        }
+    }
+
+    public final void notifyReviving() {
+        for (Observer observer : observers) {
+            observer.update(name);
+        }
+    }
+
     public final boolean isNowStunned() {
         if (roundsStunned == 0) {
             return false;

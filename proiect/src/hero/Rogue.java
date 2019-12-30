@@ -20,6 +20,7 @@ public final class Rogue extends Hero {
         criticalCount = 0;
         angelModifier = 0f;
         playerStrategy = new BasicRogue();
+        name = "Rogue " + id;
     }
 
     public void acceptHelp(final Angel angel) {
@@ -91,14 +92,17 @@ public final class Rogue extends Hero {
 
     @Override
     public void attack(final Rogue rogue) {
+        angelModifier -= Constants.CORECTINESS;
         float damage = backstab();
         if (isCritical()) {
             damage *= Constants.BACKSTAB_CRITICAL_HIT_MODIFIER;
         }
         int firstAbilityDmg = Math.round(damage
-                * (Constants.RACE_MODIFIER_BACKSTAB_ROGUE_VS_ROGUE + angelModifier));
+                * (Constants.RACE_MODIFIER_BACKSTAB_ROGUE_VS_ROGUE + angelModifier
+                + strategyBonus));
         int secondAbilityDmg = Math.round(paralysis()
-                * (Constants.RACE_MODIFIER_PARALYSIS_ROGUE_VS_ROGUE + angelModifier));
+                * (Constants.RACE_MODIFIER_PARALYSIS_ROGUE_VS_ROGUE + angelModifier
+                + strategyBonus));
         rogue.setDamageOverTime(secondAbilityDmg);
         if (landModifier != 1) {
             rogue.setRoundsLeftDmg(Constants.PARALYSIS_WOODS_ROUNDS_OVER_TIME);
@@ -118,9 +122,11 @@ public final class Rogue extends Hero {
             damage *= Constants.BACKSTAB_CRITICAL_HIT_MODIFIER;
         }
         int firstAbilityDmg = Math.round(damage
-                * (Constants.RACE_MODIFIER_BACKSTAB_ROGUE_VS_PYROMANCER + angelModifier));
+                * (Constants.RACE_MODIFIER_BACKSTAB_ROGUE_VS_PYROMANCER + angelModifier
+                + strategyBonus));
         int secondAbilityDmg = Math.round(paralysis()
-                * (Constants.RACE_MODIFIER_PARALYSIS_ROGUE_VS_PYROMANCER + angelModifier));
+                * (Constants.RACE_MODIFIER_PARALYSIS_ROGUE_VS_PYROMANCER + angelModifier
+                + strategyBonus));
         pyromancer.setDamageOverTime(secondAbilityDmg);
         if (landModifier != 1) {
             pyromancer.setRoundsLeftDmg(Constants.PARALYSIS_WOODS_ROUNDS_OVER_TIME);
@@ -140,9 +146,11 @@ public final class Rogue extends Hero {
             damage *= Constants.BACKSTAB_CRITICAL_HIT_MODIFIER;
         }
         int firstAbilityDmg = Math.round(damage
-                * (Constants.RACE_MODIFIER_BACKSTAB_ROGUE_VS_WIZARD + angelModifier));
+                * (Constants.RACE_MODIFIER_BACKSTAB_ROGUE_VS_WIZARD + angelModifier
+                + strategyBonus));
         int secondAbilityDmg = Math.round(paralysis()
-                * (Constants.RACE_MODIFIER_PARALYSIS_ROGUE_VS_WIZARD + angelModifier));
+                * (Constants.RACE_MODIFIER_PARALYSIS_ROGUE_VS_WIZARD + angelModifier
+                + strategyBonus));
         wizard.setDamageOverTime(secondAbilityDmg);
         if (landModifier != 1) {
             wizard.setRoundsLeftDmg(Constants.PARALYSIS_WOODS_ROUNDS_OVER_TIME);
@@ -157,14 +165,17 @@ public final class Rogue extends Hero {
 
     @Override
     public void attack(final Knight knight) {
+        angelModifier -= Constants.CORECTINESS;
         float damage = backstab();
         if (isCritical()) {
             damage *= Constants.BACKSTAB_CRITICAL_HIT_MODIFIER;
         }
         int firstAbilityDmg = Math.round(damage
-                * (Constants.RACE_MODIFIER_BACKSTAB_ROGUE_VS_KNIGHT + angelModifier));
+                * (Constants.RACE_MODIFIER_BACKSTAB_ROGUE_VS_KNIGHT + angelModifier
+                + strategyBonus));
         int secondAbilityDmg = Math.round(paralysis()
-                * (Constants.RACE_MODIFIER_PARALYSIS_ROGUE_VS_KNIGHT + angelModifier));
+                * (Constants.RACE_MODIFIER_PARALYSIS_ROGUE_VS_KNIGHT + angelModifier
+                + strategyBonus));
         knight.setDamageOverTime(secondAbilityDmg);
         if (landModifier != 1) {
             knight.setRoundsLeftDmg(Constants.PARALYSIS_WOODS_ROUNDS_OVER_TIME);

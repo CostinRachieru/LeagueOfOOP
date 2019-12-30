@@ -10,6 +10,7 @@ import hero.Hero;
 public class GameInputLoader {
     private final String mInputPath;
     private final String mOutputPath;
+    private FileSystem fs;
 
     GameInputLoader(final String inputPath, final String outputPath) {
         mInputPath = inputPath;
@@ -30,7 +31,8 @@ public class GameInputLoader {
         ArrayList<Integer> numberOfAngelsPerRound = new ArrayList<>();
 
         try {
-            FileSystem fs = new FileSystem(mInputPath, mOutputPath);
+//            FileSystem fs = new FileSystem(mInputPath, mOutputPath);
+            fs = new FileSystem(mInputPath, mOutputPath);
 
             mapHeight = fs.nextInt();
             mapWidth = fs.nextInt();
@@ -65,7 +67,7 @@ public class GameInputLoader {
                 }
             }
 
-            fs.close();
+//            fs.close();
         } catch (Exception e1) {
             e1.printStackTrace();
         }
@@ -75,7 +77,7 @@ public class GameInputLoader {
     }
     public final void write(final ArrayList<Hero> heroes) {
         try {
-            FileSystem fs = new FileSystem(mInputPath, mOutputPath);
+//            FileSystem fs = new FileSystem(mInputPath, mOutputPath);
             for (Hero hero : heroes) {
                 fs.writeCharacter(hero.getType());
                 if (hero.isAlive()) {
@@ -95,6 +97,16 @@ public class GameInputLoader {
                 fs.writeNewLine();
             }
             fs.close();
+        } catch (Exception e1) {
+            e1.printStackTrace();
+        }
+    }
+    public final void write(final String string) {
+        try {
+//            FileSystem fs = new FileSystem(mInputPath, mOutputPath);
+            fs.writeWord(string);
+            fs.writeNewLine();
+//            fs.close();
         } catch (Exception e1) {
             e1.printStackTrace();
         }

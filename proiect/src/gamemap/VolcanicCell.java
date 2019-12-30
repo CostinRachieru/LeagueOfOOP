@@ -12,21 +12,35 @@ public final class VolcanicCell extends Cell {
     }
 
     public boolean isCombat() {
-        if (heroesInCell.size() == 2 && !combatDone) {
-            Hero firstHero = heroesInCell.get(0);
-            Hero secondHero = heroesInCell.get(1);
-            if (firstHero.getType() == 'P') {
-                firstHero.setLandModifier(Constants.VOLCANIC_LAND_MODIFIER);
-            } else {
-                firstHero.setLandModifier(1);
+        if (heroesInCell.size() >= 2 && !combatDone) {
+            int firstPosition = -1;
+            int secondPosition = -1;
+            for (int i = 0; i < heroesInCell.size(); ++i) {
+                if (heroesInCell.get(i).isAlive()) {
+                    if (firstPosition == -1) {
+                        firstPosition = i;
+                    } else {
+                        secondPosition = i;
+                        break;
+                    }
+                }
             }
-            if (secondHero.getType() == 'P') {
-                secondHero.setLandModifier(Constants.VOLCANIC_LAND_MODIFIER);
-            } else {
-                secondHero.setLandModifier(1);
+            if (firstPosition != -1 && secondPosition != -1) {
+                Hero firstHero = heroesInCell.get(firstPosition);
+                Hero secondHero = heroesInCell.get(secondPosition);
+                if (firstHero.getType() == 'P') {
+                    firstHero.setLandModifier(Constants.VOLCANIC_LAND_MODIFIER);
+                } else {
+                    firstHero.setLandModifier(1);
+                }
+                if (secondHero.getType() == 'P') {
+                    secondHero.setLandModifier(Constants.VOLCANIC_LAND_MODIFIER);
+                } else {
+                    secondHero.setLandModifier(1);
+                }
+                combatDone = true;
+                return true;
             }
-            combatDone = true;
-            return true;
         } else {
             if (combatDone) {
                 combatDone = false;

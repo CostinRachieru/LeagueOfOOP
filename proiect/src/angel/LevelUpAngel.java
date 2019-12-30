@@ -10,12 +10,15 @@ import hero.Knight;
 public final class LevelUpAngel extends Angel {
     public LevelUpAngel(final Coordinates location) {
         this.location = location;
+        name = "LevelUpAngel";
+        action = "helped";
     }
 
     public void help(final Rogue hero) {
         if (hero.isAlive()) {
             hero.modifyAngelModifier(Constants.LEVELUPANGEL_ROGUE_MODIFIER);
             hero.newLevel();
+            notifyObserverHelp(hero.getName());
         }
     }
 
@@ -23,6 +26,7 @@ public final class LevelUpAngel extends Angel {
         if (hero.isAlive()) {
             hero.modifyAngelModifier(Constants.LEVELUPANGEL_KNIGHT_MODIFIER);
             hero.newLevel();
+            notifyObserverHelp(hero.getName());
         }
     }
 
@@ -30,6 +34,7 @@ public final class LevelUpAngel extends Angel {
         if (hero.isAlive()) {
             hero.modifyAngelModifier(Constants.LEVELUPANGEL_WIZARD_MODIFIER);
             hero.newLevel();
+            notifyObserverHelp(hero.getName());
         }
     }
 
@@ -37,6 +42,7 @@ public final class LevelUpAngel extends Angel {
         if (hero.isAlive()) {
             hero.modifyAngelModifier(Constants.LEVELUPANGEL_PYROMANCER_MODIFIER);
             hero.newLevel();
+            notifyObserverHelp(hero.getName());
         }
     }
 }

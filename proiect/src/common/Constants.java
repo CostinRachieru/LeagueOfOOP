@@ -232,4 +232,8 @@ public final class Constants {
 
     public static final int WIZARD_SUPER_LOW_HP_STRATEGY_HP_GAINED_DENOMINATOR = 5;
     public static final float WIZARD_SUPER_LOW_HP_STRATEGY_DECREASED_MODIFIER = -0.2f;
+
+
+
+    public static final float CORECTINESS = 0.0000001f;
 }

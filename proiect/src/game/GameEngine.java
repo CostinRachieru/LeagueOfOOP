@@ -80,10 +80,25 @@ public final class GameEngine {
                     ArrayList<Hero> heroesToFight = map.getHeroesInCell(location);
                     Hero firstHero = heroesToFight.get(0);
                     Hero secondHero = heroesToFight.get(1);
+                    int alreadyFoundOne = 0;
+                    if (heroesToFight.size() > 2) {
+                        for (int i = 0; i < heroesToFight.size(); ++i) {
+                            if (heroesToFight.get(i).isAlive() && alreadyFoundOne == 0) {
+                                firstHero = heroesToFight.get(i);
+                                alreadyFoundOne = 1;
+                            } else {
+                                if (heroesToFight.get(i).isAlive() && alreadyFoundOne == 1) {
+                                    secondHero = heroesToFight.get(i);
+                                    break;
+                                }
+                            }
+                        }
+                    }
                     secondHero.isAttackedBy(firstHero);
                     firstHero.isAttackedBy(secondHero);
                     if (firstHero.isAlive() && !secondHero.isAlive()) {
                         firstHero.kill(secondHero);
+
                     }
                     if (secondHero.isAlive() && !firstHero.isAlive()) {
                         secondHero.kill(firstHero);
@@ -99,15 +114,13 @@ public final class GameEngine {
         GameMap map = GameMap.getInstance();
         ArrayList<Angel> angelsThisRound = angels.get(round);
         for (Angel angel : angelsThisRound) {
+            angel.notifyObserverSpawn();
             Coordinates angelLocation = angel.getLocation();
             ArrayList<Hero> heroesInCell = map.getHeroesInCell(angelLocation);
             for (int i = 0; i < heroesInCell.size(); ++i) {
                 Hero hero = heroesInCell.get(i);
-                System.out.print(hero.getType() + ": " + hero.getHealthPoints() + " - ");
                 hero.acceptHelp(angel);
-                System.out.println(hero.getHealthPoints());
             }
-            System.out.println();
         }
     }
     public static void heroesChoseStrategy(final ArrayList<Hero> heroes) {

@@ -18,9 +18,8 @@ public final class Knight extends Hero {
         roundsLeftDmg = 0;
         angelModifier = 0f;
         playerStrategy = new BasicKnight();
+        name = "Knight " + id;
     }
-
-
 
     @Override
     public void acceptHelp(final Angel angel) {
@@ -98,9 +97,11 @@ public final class Knight extends Hero {
                 * Constants.ROGUE_HEALTHPOINTS_PER_LEVEL;
         int firstAbilityDmg;
         firstAbilityDmg = Math.round(execute(maxOpponentHp, rogue.getHealthPoints())
-                * (Constants.RACE_MODIFIER_EXECUTE_KNIGHT_VS_ROGUE + angelModifier));
+                * (Constants.RACE_MODIFIER_EXECUTE_KNIGHT_VS_ROGUE + angelModifier
+                + strategyBonus));
         int secondAbilityDmg = Math.round(slam()
-                * (Constants.RACE_MODIFIER_SLAM_KNIGHT_VS_ROGUE + angelModifier));
+                * (Constants.RACE_MODIFIER_SLAM_KNIGHT_VS_ROGUE + angelModifier
+                + strategyBonus));
         rogue.setRoundsStunned(1);
         int damageDealt = firstAbilityDmg + secondAbilityDmg;
         rogue.sufferDamage(damageDealt);
@@ -119,7 +120,6 @@ public final class Knight extends Hero {
                 + strategyBonus));
         pyromancer.setRoundsStunned(1);
         int damageDealt = firstAbilityDmg + secondAbilityDmg;
-        System.out.println(angelModifier);
         pyromancer.sufferDamage(damageDealt);
     }
 
@@ -129,9 +129,11 @@ public final class Knight extends Hero {
                 * Constants.WIZARD_HEALTHPOINTS_PER_LEVEL;
         int firstAbilityDmg;
         firstAbilityDmg = Math.round(execute(maxOpponentHp, wizard.getHealthPoints())
-                * (Constants.RACE_MODIFIER_EXECUTE_KNIGHT_VS_WIZARD + angelModifier));
+                * (Constants.RACE_MODIFIER_EXECUTE_KNIGHT_VS_WIZARD + angelModifier
+                + strategyBonus));
         int secondAbilityDmg = Math.round(slam()
-                * (Constants.RACE_MODIFIER_SLAM_KNIGHT_VS_WIZARD + angelModifier));
+                * (Constants.RACE_MODIFIER_SLAM_KNIGHT_VS_WIZARD + angelModifier
+                + strategyBonus));
         wizard.setRoundsStunned(1);
         int damageDealt = firstAbilityDmg + secondAbilityDmg;
         wizard.sufferDamage(damageDealt);
@@ -142,9 +144,10 @@ public final class Knight extends Hero {
                 * Constants.KNIGHT_HEALTHPOINTS_PER_LEVEL;
         int firstAbilityDmg;
         firstAbilityDmg = Math.round(execute(maxOpponentHp, knight.getHealthPoints())
-                * Constants.RACE_MODIFIER_EXECUTE_KNIGHT_VS_KNIGHT);
+                * Constants.RACE_MODIFIER_EXECUTE_KNIGHT_VS_KNIGHT + strategyBonus);
         int secondAbilityDmg = Math.round(slam()
-                * (Constants.RACE_MODIFIER_SLAM_KNIGHT_VS_KNIGHT + angelModifier));
+                * (Constants.RACE_MODIFIER_SLAM_KNIGHT_VS_KNIGHT + angelModifier
+                + strategyBonus));
         knight.setRoundsStunned(1);
         int damageDealt = firstAbilityDmg + secondAbilityDmg;
         knight.sufferDamage(damageDealt);

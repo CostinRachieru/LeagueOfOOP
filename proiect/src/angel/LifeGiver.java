@@ -10,29 +10,35 @@ import hero.Knight;
 public final class LifeGiver extends Angel {
     public LifeGiver(final Coordinates location) {
         this.location = location;
+        name = "LifeGiver";
+        action = "helped";
     }
 
     public void help(final Rogue hero) {
         if (hero.isAlive()) {
             giveHealth(hero, Constants.LIFEGIVER_GIVEN_HP_FOR_ROGUE);
+            notifyObserverHelp(hero.getName());
         }
     }
 
     public void help(final Knight hero) {
         if (hero.isAlive()) {
             giveHealth(hero, Constants.LIFEGIVER_GIVEN_HP_FOR_KNIGHT);
+            notifyObserverHelp(hero.getName());
         }
     }
 
     public void help(final Wizard hero) {
         if (hero.isAlive()) {
             giveHealth(hero, Constants.LIFEGIVER_GIVEN_HP_FOR_WIZARD);
+            notifyObserverHelp(hero.getName());
         }
     }
 
     public void help(final Pyromancer hero) {
         if (hero.isAlive()) {
             giveHealth(hero, Constants.LIFEGIVER_GIVEN_HP_FOR_PYROMANCER);
+            notifyObserverHelp(hero.getName());
         }
     }
 }
