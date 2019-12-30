@@ -47,10 +47,8 @@ public final class GameMap {
     }
 
     public void heroGoToCell(final Hero hero, final Coordinates location) {
-//        if (location.getRow() >= 0 && location.getLine() >= 0) {
             Cell cell = getCell(location);
             cell.addHero(hero);
-//        }
     }
 
     public boolean isCombat(final Coordinates location) {

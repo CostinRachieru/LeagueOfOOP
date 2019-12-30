@@ -47,7 +47,7 @@ public abstract class Hero {
 
     private void goToCell() {
         GameMap gameMap = GameMap.getInstance();
-        if (location.getLine() >= 0 && location.getRow() > 0) {
+        if (location.getLine() >= 0 && location.getRow() >= 0) {
             gameMap.heroGoToCell(this, location);
         }
     }
@@ -95,6 +95,10 @@ public abstract class Hero {
 
     public final void setStrategyBonus(final float strategyBonus) {
         this.strategyBonus += strategyBonus;
+    }
+
+    public final int getId() {
+        return id;
     }
 
     public final void modifyAngelModifier(final float modifier) {
@@ -168,6 +172,10 @@ public abstract class Hero {
         return name;
     }
 
+    public final void killThemselves(final Hero hero) {
+        notifyKilling(hero.getName());
+    }
+
     public final void kill(final Hero hero) {
         notifyKilling(hero.getName());
         int opponentLevel = hero.getLevel();
@@ -182,7 +190,7 @@ public abstract class Hero {
         }
     }
 
-    public final void notifyKilling(String killed) {
+    public final void notifyKilling(final String killed) {
         for (Observer observer : observers) {
             observer.update(name, killed);
         }

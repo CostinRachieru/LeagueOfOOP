@@ -11,27 +11,27 @@ public class AngelHelpingHeroes implements Observer {
     }
 
     @Override
-    public void update(final String name, final Coordinates location) {
+    public final void update(final String name, final Coordinates location) {
     }
 
     @Override
-    public void update(final String killer, final String killed) {
+    public final void update(final String killer, final String killed) {
     }
 
     @Override
-    public void update(final String angelName, final String heroName, final String action) {
+    public final void update(final String angelName, final String heroName, final String action) {
         gameInputLoader.write(angelName + " " + action + " " + heroName);
     }
 
     @Override
-    public void update(final String name, final int level) {
+    public final void update(final String name, final int level) {
     }
 
     @Override
-    public void update(final String name) {
+    public final void update(final String name) {
     }
 
     @Override
-    public void updateAngelKill(final String killed) {
+    public final void updateAngelKill(final String killed) {
     }
 }

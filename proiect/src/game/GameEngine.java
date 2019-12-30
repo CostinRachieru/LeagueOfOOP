@@ -103,6 +103,10 @@ public final class GameEngine {
                     if (secondHero.isAlive() && !firstHero.isAlive()) {
                         secondHero.kill(firstHero);
                     }
+                    if (!secondHero.isAlive() && !firstHero.isAlive()) {
+                        firstHero.killThemselves(secondHero);
+                        secondHero.killThemselves(firstHero);
+                    }
                     firstHero.increaseCriticalCount();
                     secondHero.increaseCriticalCount();
                 }
@@ -117,9 +121,19 @@ public final class GameEngine {
             angel.notifyObserverSpawn();
             Coordinates angelLocation = angel.getLocation();
             ArrayList<Hero> heroesInCell = map.getHeroesInCell(angelLocation);
+            int lastMinId = -1;
             for (int i = 0; i < heroesInCell.size(); ++i) {
-                Hero hero = heroesInCell.get(i);
-                hero.acceptHelp(angel);
+                Hero currentHeroHelped = heroesInCell.get(0);
+                int minId = 100;
+                for (int j = 0; j < heroesInCell.size(); ++j) {
+                    int id = heroesInCell.get(j).getId();
+                    if (id < minId && id > lastMinId) {
+                        minId = id;
+                        currentHeroHelped = heroesInCell.get(j);
+                    }
+                }
+                currentHeroHelped.acceptHelp(angel);
+                lastMinId = currentHeroHelped.getId();
             }
         }
     }

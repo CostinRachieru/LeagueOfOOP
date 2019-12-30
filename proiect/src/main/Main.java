@@ -3,9 +3,14 @@ package main;
 import angel.Angel;
 import game.GameEngine;
 import gamemap.GameMap;
-import hero.Coordinates;
 import hero.Hero;
-import observer.*;
+import observer.KillingMonitor;
+import observer.HeroesLevelMonitor;
+import observer.AngelKillingMonitor;
+import observer.AngelHelpingHeroes;
+import observer.AngelSpawningMonitor;
+import observer.Observer;
+import observer.RevivingMonitor;
 
 import java.util.ArrayList;
 
