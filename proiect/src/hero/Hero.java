@@ -52,10 +52,6 @@ public abstract class Hero {
         }
     }
 
-    public final float getLandModifier() {
-        return landModifier;
-    }
-
     private void moveUp() {
         leaveCell();
         int newLine = location.getLine() - 1;
@@ -82,6 +78,10 @@ public abstract class Hero {
         int newRow = location.getRow() + 1;
         location.setRow(newRow);
         goToCell();
+    }
+
+    private void setDeath() {
+        healthPoints = 0;
     }
 
     public final void registerObserver(final Observer observer) {
@@ -140,10 +140,6 @@ public abstract class Hero {
         notifyReviving();
     }
 
-    private void setDeath() {
-        healthPoints = 0;
-    }
-
     public final void sufferDamage(final int damage) {
         healthPoints -= damage;
         if (healthPoints <= 0) {
@@ -166,10 +162,6 @@ public abstract class Hero {
             }
             resetHealthPoints();
         }
-    }
-
-    public final String getName() {
-        return name;
     }
 
     public final void killThemselves(final Hero hero) {
@@ -236,6 +228,14 @@ public abstract class Hero {
 
     public final char getType() {
         return type;
+    }
+
+    public final float getLandModifier() {
+        return landModifier;
+    }
+
+    public final String getName() {
+        return name;
     }
 
     public final void setLandModifier(final float landModifier) {

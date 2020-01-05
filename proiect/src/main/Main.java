@@ -4,13 +4,7 @@ import angel.Angel;
 import game.GameEngine;
 import gamemap.GameMap;
 import hero.Hero;
-import observer.KillingMonitor;
-import observer.HeroesLevelMonitor;
-import observer.AngelKillingMonitor;
-import observer.AngelHelpingHeroes;
-import observer.AngelSpawningMonitor;
-import observer.Observer;
-import observer.RevivingMonitor;
+import observer.GrandMagician;
 
 import java.util.ArrayList;
 
@@ -23,25 +17,23 @@ public final class Main {
 
         GameEngine.initMap(gameInput);
 
+        /**
+         * Initialize heroes and angels and register the observers to them.
+         */
         ArrayList<Hero> heroes = GameEngine.initHeroes(gameInput);
-        Observer killingMonitor = new KillingMonitor(gameInputLoader);
-        Observer heroesLevelMonitor = new HeroesLevelMonitor(gameInputLoader);
-        Observer revivingMonitor = new RevivingMonitor(gameInputLoader);
+        GrandMagician greatMagician = new GrandMagician(gameInputLoader);
         for (Hero hero : heroes) {
-            hero.registerObserver(killingMonitor);
-            hero.registerObserver(heroesLevelMonitor);
-            hero.registerObserver(revivingMonitor);
+            hero.registerObserver(greatMagician.getKillingMonitor());
+            hero.registerObserver(greatMagician.getHeroesLevelMonitor());
+            hero.registerObserver(greatMagician.getRevivingMonitor());
         }
         ArrayList<ArrayList<Angel>> angels = GameEngine.initAngels(gameInput);
-        Observer angelSpawningMonitor = new AngelSpawningMonitor(gameInputLoader);
-        Observer angelHelpingHeroes = new AngelHelpingHeroes(gameInputLoader);
-        Observer angelKillingMonitor = new AngelKillingMonitor(gameInputLoader);
         for (int i = 0; i < angels.size(); ++i) {
             for (int j = 0; j < angels.get(i).size(); ++j) {
                 Angel angel = angels.get(i).get(j);
-                angel.registerObserver(angelSpawningMonitor);
-                angel.registerObserver(angelHelpingHeroes);
-                angel.registerObserver(angelKillingMonitor);
+                angel.registerObserver(greatMagician.getAngelSpawningMonitor());
+                angel.registerObserver(greatMagician.getAngelHelpingHeroes());
+                angel.registerObserver(greatMagician.getAngelKillingMonitor());
             }
         }
         GameMap  map = GameMap.getInstance();

@@ -236,4 +236,5 @@ public final class Constants {
 
 
     public static final float CORECTINESS = 0.0000001f;
+    public static final int MAX_NUMBER_OF_PLAYERS = 100;
 }

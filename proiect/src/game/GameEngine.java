@@ -2,6 +2,7 @@ package game;
 
 import angel.Angel;
 import angel.AngelFactory;
+import common.Constants;
 import gamemap.GameMap;
 import hero.Coordinates;
 import hero.Hero;
@@ -57,7 +58,7 @@ public final class GameEngine {
         String movesThisRound = moves.get(round);
         int whichHero = 0;
         /**
-         * Moves every player to the desired location if not stunned.
+         * Moves every player to the desired location if not stunned and take the over time damage.
          */
         for (Hero hero : heroes) {
             hero.sufferDamageOverTime();
@@ -81,6 +82,9 @@ public final class GameEngine {
                     Hero firstHero = heroesToFight.get(0);
                     Hero secondHero = heroesToFight.get(1);
                     int alreadyFoundOne = 0;
+                    /**There can be more than 2 players in a cell (but maximum 2 alive), so
+                     * the program needs to find those 2 players alive.
+                     */
                     if (heroesToFight.size() > 2) {
                         for (int i = 0; i < heroesToFight.size(); ++i) {
                             if (heroesToFight.get(i).isAlive() && alreadyFoundOne == 0) {
@@ -114,6 +118,10 @@ public final class GameEngine {
         }
     }
 
+    /** All the angels on the map act upon the heores.
+     * @param angels
+     * @param round
+     */
     public static void helpHeroes(final ArrayList<ArrayList<Angel>> angels, final int round) {
         GameMap map = GameMap.getInstance();
         ArrayList<Angel> angelsThisRound = angels.get(round);
@@ -124,7 +132,7 @@ public final class GameEngine {
             int lastMinId = -1;
             for (int i = 0; i < heroesInCell.size(); ++i) {
                 Hero currentHeroHelped = heroesInCell.get(0);
-                int minId = 100;
+                int minId = Constants.MAX_NUMBER_OF_PLAYERS;
                 for (int j = 0; j < heroesInCell.size(); ++j) {
                     int id = heroesInCell.get(j).getId();
                     if (id < minId && id > lastMinId) {

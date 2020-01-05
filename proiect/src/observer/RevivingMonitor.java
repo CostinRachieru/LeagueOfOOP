@@ -27,7 +27,7 @@ public class RevivingMonitor implements Observer {
     }
 
     @Override
-    public void update(final String name) {
+    public final void update(final String name) {
         gameInputLoader.write("Player " + name + " was brought to life by an angel");
     }
 
