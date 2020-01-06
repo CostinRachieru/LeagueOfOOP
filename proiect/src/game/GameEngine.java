@@ -100,16 +100,21 @@ public final class GameEngine {
                     }
                     secondHero.isAttackedBy(firstHero);
                     firstHero.isAttackedBy(secondHero);
-                    if (firstHero.isAlive() && !secondHero.isAlive()) {
+                    if (!secondHero.isAlive() && firstHero.isAlive()) {
                         firstHero.kill(secondHero);
-
                     }
-                    if (secondHero.isAlive() && !firstHero.isAlive()) {
+                    if (!firstHero.isAlive() && secondHero.isAlive()) {
                         secondHero.kill(firstHero);
                     }
-                    if (!secondHero.isAlive() && !firstHero.isAlive()) {
+                    if (!firstHero.isAlive() && !secondHero.isAlive()) {
+                        int currentFirstHeroLevel = firstHero.getLevel();
+                        int currentSecondHeroLevel = secondHero.getLevel();
                         firstHero.killThemselves(secondHero);
                         secondHero.killThemselves(firstHero);
+                        firstHero.experienceGainedKillThemselves(currentFirstHeroLevel,
+                                currentSecondHeroLevel);
+                        secondHero.experienceGainedKillThemselves(currentSecondHeroLevel,
+                                currentFirstHeroLevel);
                     }
                     firstHero.increaseCriticalCount();
                     secondHero.increaseCriticalCount();

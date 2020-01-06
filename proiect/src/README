@@ -4,6 +4,30 @@
 	Surname: Costin Tudor
 	Class: 324 CA
 
+	First stage of the project:
+	
+		I chose to use two factories, one for the types of heroes, and one for the types of Cell
+	(for further improvements). The interactions between the heroes are made with DoubleDispatch.
+	The map of the game is a SingleTone. The reading is done using the FileIO.jar file methods.
+
+	    The main features of the game are implemented in the GameEngine class: the initialisation
+	of the map and players, the movement and the combat of the players. The readability is improved
+	by the large number of methods implemented in final classes.
+
+	    The Map is formed by Cells generated for each type of terrain and stored in an
+	ArrayList<ArrayList<Cell>>. These cells also store the players in them (can store any number
+	of players) and update the land modifier of the heroes. These also check if there is a combat
+	to be fought.
+
+        	In the Hero class are implemented methods common for all heroes, like the ones used for
+    	leveling up system, the death, the movement and how they are getting damaged. In the
+	subclasses of the Hero class is implemented a DoubleDispatch so that the heroes can interact
+	with each other. In each subclass there are methods that implement abilities and the mechanism
+    	these affect other heroes. Mainly, each ability has a method that returns its damage without
+    	the race modifier applied (so that the methods can be used by the wizard to compute its
+    	damages).
+	
+
 	Second stage of the project:
 
 		For adding the angels, the strategies for heroes and the Grand Magician I chose to use
@@ -24,6 +48,8 @@
 		Observer
 		The Grand Magician is made out of many observers who are monitoring different aspects of the
 	game.
+
+        
 
         I wrote the code this way, so that it is scalable and easy to add new features to it.
 

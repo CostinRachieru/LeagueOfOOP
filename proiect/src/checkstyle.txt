@@ -1,4 +1,5 @@
 Starting audit...
+[ERROR] /home/costintudi/Desktop/Proiect-POO/proiect/src/hero/Hero.java:171: Line is longer than 100 characters (found 102). [LineLength]
 [ERROR] /home/costintudi/Desktop/Proiect-POO/proiect/src/main/GameInput.java:32:12: More than 7 parameters (found 9). [ParameterNumber]
 Audit done.
-Checkstyle ends with 1 errors.
+Checkstyle ends with 2 errors.

@@ -168,10 +168,8 @@ public abstract class Hero {
         notifyKilling(hero.getName());
     }
 
-    public final void kill(final Hero hero) {
-        notifyKilling(hero.getName());
-        int opponentLevel = hero.getLevel();
-        int experienceGained = Constants.BASE_EXPERIENCE - (level - opponentLevel)
+    public final void experienceGainedKillThemselves(final int killerLevel, final int opponentLevel) {
+        int experienceGained = Constants.BASE_EXPERIENCE - (killerLevel - opponentLevel)
                 * Constants.EXPERIENCE_GAINED_FOR_LEVEL;
         if (experienceGained < 0) {
             experienceGained = 0;
@@ -179,6 +177,22 @@ public abstract class Hero {
         experience += experienceGained;
         if (experience > Constants.EXPERIENCE_FOR_FIRST_LEVEL) {
             updateLevel();
+        }
+    }
+
+    public final void kill(final Hero hero) {
+        notifyKilling(hero.getName());
+        if (this.isAlive()) {
+            int opponentLevel = hero.getLevel();
+            int experienceGained = Constants.BASE_EXPERIENCE - (level - opponentLevel)
+                    * Constants.EXPERIENCE_GAINED_FOR_LEVEL;
+            if (experienceGained < 0) {
+                experienceGained = 0;
+            }
+            experience += experienceGained;
+            if (experience > Constants.EXPERIENCE_FOR_FIRST_LEVEL) {
+                updateLevel();
+            }
         }
     }
 
